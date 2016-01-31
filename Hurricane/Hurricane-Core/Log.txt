@@ -1,0 +1,16 @@
+Sun Jan 31 00:59:42 2016y:\github\hurricane\hurricane\hurricane-core\main.cpp65
+INFO: Main::Main()
+Notes: Hello!
+
+Sun Jan 31 01:02:00 2016y:\github\hurricane\hurricane\hurricane-core\main.cpp65
+INFO: Main::Main()
+Notes: Hello!
+
+Sun Jan 31 01:04:05 2016y:\github\hurricane\hurricane\hurricane-core\main.cpp59
+ERROR: Main::Main()
+Notes: MEMORY LEAK DETECTED
+
+Sun Jan 31 01:25:15 2016y:\github\hurricane\hurricane\hurricane-core\main.cpp60
+ERROR: Main::Main()
+Notes: MEMORY LEAK DETECTED
+

@@ -65,9 +65,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="exception.h" />
+    <ClInclude Include="fstream.h" />
     <ClInclude Include="iostream.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="string.h" />
