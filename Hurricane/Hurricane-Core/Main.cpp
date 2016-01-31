@@ -1,4 +1,11 @@
+//*******************************//
+//
+// Welcome to Hurricane!
+//
+//*******************************//
+
 #include "Main.h"
+//using namespace CORE;
 
 #ifndef _STRING_H
 	#include "string.h"
@@ -6,6 +13,10 @@
 
 #ifndef _IOSTREAM_H
 	#include "iostream.h"
+#endif
+
+#ifndef _DEBUG_H
+	#include "Debug.h"
 #endif
 
 #if defined(DEBUG) | defined(_DEBUG) 
@@ -16,22 +27,16 @@ int _tmain(int argc, char** argv) {
 
 	// Debugger::ConsoleLog("Starting Hurricane!");
 
-	// Run the main function
-	/*main(0, NULL);*/
-	// Run WinMain subroutine
+	// Run WinMain function
 	WinMain((HINSTANCE)GetModuleHandle(NULL), 0, 0, SW_SHOW);
 }
 #endif
 
-//int main(int argc, char** argv) 
-//{
-//	UNREFERENCED_PARAMETER(argc);
-//	UNREFERENCED_PARAMETER(argv);
-//
 
 
 // Our main function
-// btw -> HINSTANCE is a handle to an instance of an application. 
+// btw -> HINSTANCE is a "handle" to an instance of an application. 
+//		In our case, the main function!
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
 {
 		UNREFERENCED_PARAMETER(hInstance);
@@ -39,22 +44,38 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		UNREFERENCED_PARAMETER(lpCmdLine);
 		UNREFERENCED_PARAMETER(nCmdShow);
 
-#if defined(DEBUG) | defined(_DEBUG) 
+#if defined(DEBUG) | defined(_DEBUG)
+	// Initialize the debug if it doesn't already exist
+	Debug::Init();
+
 	// Avoid memory leaks by catching them
 	// Won't catch all of them (but you gotta catch 'em all right? lol)
 	HeapSetInformation(NULL, HeapEnableTerminationOnCorruption, NULL, 0);
 
 	// Enable run-time memory leaks checks for debug builds
-	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	// By default, this function will call _CrtDumpMemoryLeaks() at any exit point
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	// If a memory leak is found, the subroutine below will print to the 
-	//	 output w/ the ID of the memory leak
-	//_CrtSetBreakAlloc(0);
+	// If a memory leak is found, the main function will NOT return 0
+	// This will trigger the breakpoint below to find the mem leak
+	if (!_CrtSetBreakAlloc(0)) {
+		std::cerr << "ERROR: MEMORY LEAK DETECTED" << std::endl;
+		Debug::Log(EMessageType::ERR, "Main", "Main", __TIMESTAMP__, __FILE__, __LINE__, "MEMORY LEAK DETECTED");
+		_CrtDbgBreak();
+	}
+	
 #endif
 
 	// Make sure we're not running on a 64-bit machine
 	static_assert(sizeof(void*) == 4, "64-bit code generation not supported!\n");
+	
+	//TO DO:
 
+	// Call the engine's run function
+	// The run function should create the engine instance if it doesn't already exist
+	//HurricaneEngine::getInstance()->Run();
 
+	// That's it!
+	// the main function should be this small!
 	exit(0);
 }

@@ -5,7 +5,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Jan 23, 2016
-// Last updated:	Jan 23, 2016
+// Last updated:	Jan 31, 2016
 //
 //*******************************//
 
@@ -16,8 +16,16 @@
 	#include <Windows.h>
 #endif
 
+#ifndef _CRTDBG_MAP_ALLOC
+#define _CRTDBG_MAP_ALLOC
+	#include <stdlib.h>
+	#include <crtdbg.h>
+#endif
+
+//namespace CORE {
+
 int _tmain(int argc, char** argv);
-//int main(int argc, char** argv);
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);
 
+//}
 #endif
