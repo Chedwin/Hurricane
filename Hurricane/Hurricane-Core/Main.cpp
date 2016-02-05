@@ -25,7 +25,7 @@ int _tmain(int argc, char** argv) {
 	UNREFERENCED_PARAMETER(argc);
 	UNREFERENCED_PARAMETER(argv);
 
-	// Debugger::ConsoleLog("Starting Hurricane!");
+	Debug::ConsoleLog("Starting Hurricane!");
 
 	// Run WinMain function
 	WinMain((HINSTANCE)GetModuleHandle(NULL), 0, 0, SW_SHOW);
@@ -59,7 +59,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// If a memory leak is found, the main function will NOT return 0
 	// This will trigger the breakpoint below to find the mem leak
 	if (!_CrtSetBreakAlloc(0)) {
-		std::cerr << "ERROR: MEMORY LEAK DETECTED" << std::endl;
+		Debug::ConsoleError("MEMORY LEAK DETECTED");
 		Debug::Log(EMessageType::ERR, "Main", "Main", __TIMESTAMP__, __FILE__, __LINE__, "MEMORY LEAK DETECTED");
 		_CrtDbgBreak();
 	}
