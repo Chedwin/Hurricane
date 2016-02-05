@@ -41,3 +41,7 @@ void Debug::Log(const EMessageType MsgType, const std::string& Class, const std:
 void Debug::ConsoleLog(const std::string& notes) {
 	std::cout << notes << std::endl;
 }
+
+void Debug::ConsoleError(const std::string& error) {
+	std::cerr << "ERROR: " << error << std::endl;
+}

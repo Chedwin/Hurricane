@@ -6,7 +6,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Jan 20, 2016
-// Last updated:	Jan 20, 2016
+// Last updated:	Feb 05, 2016
 //
 //*******************************//
 
@@ -19,7 +19,8 @@
 #endif
 
 #ifndef _STRING
-#include <string>
+	#include <string>
+	typedef std::string eString;
 #endif
 
 // Use of Character Byte Systems for all spoken languages
