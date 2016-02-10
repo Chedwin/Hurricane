@@ -17,7 +17,7 @@
 	#include "iostream.h"
 #endif
 
-namespace {
+//namespace {
 
 	class Exception : public _exception {
 
@@ -37,10 +37,10 @@ namespace {
 	};
 
 
-	// This is a static exception variable in "GLOBAL" scope of namespace GAME outside of the Exception class
-	// Everybody in the GAME namespace can use this
+	// This is a static exception variable in "GLOBAL" scope of namespace Core outside of the Exception class
+	// Everybody in the Core namespace can use this
 	static Exception exc;
-}
+//}
 
 
 #endif

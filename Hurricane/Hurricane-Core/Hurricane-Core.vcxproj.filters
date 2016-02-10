@@ -11,6 +11,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{c93e1709-56ac-46bb-b5b4-533836fd44d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -18,6 +21,12 @@
     </ClCompile>
     <ClCompile Include="Debug.cpp">
       <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="HurricaneEngine.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +47,36 @@
     </ClInclude>
     <ClInclude Include="exception.h">
       <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="VMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="stdio.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="assert.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="HuricaneEngine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>Defines</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

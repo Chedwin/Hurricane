@@ -6,7 +6,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Jan 31, 2016
-// Last updated:	Jan 31, 2016
+// Last updated:	Feb 05, 2016
 //
 //*******************************//
 
@@ -40,6 +40,7 @@
 		static void Init();
 		static void Log(const EMessageType MsgType, const std::string& Class, const std::string& Method, const std::string& timestamp, const std::string& file, const int& line, const std::string& Comments);
 		static void ConsoleLog(const std::string& notes);
+		static void ConsoleError(const std::string& error);
 	};
 
 //}
