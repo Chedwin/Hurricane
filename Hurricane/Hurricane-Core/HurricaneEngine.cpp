@@ -1,6 +1,6 @@
 #include "HuricaneEngine.h"
 
-// using namespace CORE
+using namespace CORE;
 
 std::unique_ptr<HurricaneEngine> HurricaneEngine::hEngineInstance(nullptr);
 

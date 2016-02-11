@@ -1,6 +1,8 @@
 #include "Window.h"
 #include "Debug.h"
 
+using namespace CORE;
+
 Window::Window() : isInitialized(false), windowPtr(nullptr), isFullScreen(false) {
 	OnCreate();
 }
