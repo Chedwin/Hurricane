@@ -4,8 +4,9 @@
 //
 //*******************************//
 
-#include "Main.h"
-//using namespace CORE;
+#ifndef _MAIN_H
+	#include "Main.h"
+#endif
 
 #ifndef _STRING_H
 	#include "string.h"
@@ -18,6 +19,10 @@
 #ifndef _DEBUG_H
 	#include "Debug.h"
 #endif
+
+// state our using namespaces here
+using namespace CORE;
+
 
 #if defined(DEBUG) | defined(_DEBUG) 
 int _tmain(int argc, char** argv) {

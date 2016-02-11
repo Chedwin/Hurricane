@@ -1,7 +1,7 @@
 #include "Debug.h"
 #include "string.h"
 
-//using namespace CORE;
+using namespace CORE;
 
 void Debug::Init(){
 	std::ofstream out;

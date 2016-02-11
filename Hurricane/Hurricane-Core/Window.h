@@ -17,43 +17,47 @@
 // Since SDL is a 3rd party SDK, it should NOT be macro-defined in our project
 #include <SDL.h>
 
-class Window {
-public:
-	Window();
-	~Window();
+namespace CORE {
 
-	/// C11 precautions delete these non-needed default constructors and operators
-	Window(const Window&) = delete;
-	Window(Window&&) = delete;
-	Window& operator = (const Window&) = delete;
-	Window& operator = (Window&&) = delete;
+	class Window {
+	public:
+		Window();
+		~Window();
 
-	bool OnCreate();
-	void OnDestroy();
+		/// C11 precautions delete these non-needed default constructors and operators
+		Window(const Window&) = delete;
+		Window(Window&&) = delete;
+		Window& operator = (const Window&) = delete;
+		Window& operator = (Window&&) = delete;
 
-	void SetWindowSize(const int Width_, const int Height_);
+		bool OnCreate();
+		void OnDestroy();
 
-	int GetWidth() const;
-	int GetHeight() const;
-protected:
-	void GetInstalledOpenGLInfo();
-private:
-	bool isInitialized;
-	bool isFullScreen;
+		void SetWindowSize(const int Width_, const int Height_);
+
+		int GetWidth() const;
+		int GetHeight() const;
+	protected:
+		void GetInstalledOpenGLInfo();
+	private:
+		bool isInitialized;
+		bool isFullScreen;
 
 
-// Our 3rd party graphics API calls
-// From here, we can easily change which API can be implemented
-// We'll start with SDL for now.....
-public:
-	inline SDL_Window* getSDLWindow() const {
-		return windowPtr;
-	}
-	void ToggleFullScreen();
-private:
-	SDL_Window* windowPtr;
-	SDL_GLContext glContext;
-	SDL_Rect winRect;
-};
+	// Our 3rd party graphics API calls
+	// From here, we can easily change which API can be implemented
+	// We'll start with SDL for now.....
+	public:
+		inline SDL_Window* getSDLWindow() const {
+			return windowPtr;
+		}
+		void ToggleFullScreen();
+	private:
+		SDL_Window* windowPtr;
+		SDL_GLContext glContext;
+		SDL_Rect winRect;
+	}; // end Window class
+
+} // end namespace CORE
 
 #endif
