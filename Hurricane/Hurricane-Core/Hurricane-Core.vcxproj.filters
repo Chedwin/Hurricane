@@ -72,11 +72,11 @@
     <ClInclude Include="memory.h">
       <Filter>Defines</Filter>
     </ClInclude>
-    <ClInclude Include="Debug.h">
-      <Filter>Defines</Filter>
-    </ClInclude>
     <ClInclude Include="exception.h">
       <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Debug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
