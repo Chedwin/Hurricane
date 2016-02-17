@@ -1,0 +1,16 @@
+﻿Build started 2/11/2016 12:28:33 PM.
+     1>Project "Y:\Downloads\bullet3-2.83.7\build3\vs2010\Test_BulletDynamics.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\test\BulletDynamics\pendulum /I..\..\src /I"..\..\test\gtest-1.7.0\include" /I"C:\Gamedev\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D _DEBUG=1 /D USE_GTEST /D _VARIADIC_MAX=10 /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Fo"obj\x32\Debug\Test_BulletDynamics\\" /Fd"..\..\bin\Test_BulletDynamics_vs2010_debug.pdb" /Gd /TP /analyze- /errorReport:prompt /MP ..\..\examples\MultiBody\Pendulum.cpp
+         Pendulum.cpp
+     1>y:\downloads\bullet3-2.83.7\examples\multibody\../CommonInterfaces/CommonMultiBodyBase.h(338): warning C4316: 'btMultiBodyPoint2Point' : object allocated on the heap may not be aligned 16
+     1>..\..\examples\MultiBody\Pendulum.cpp(195): warning C4316: 'Pendulum' : object allocated on the heap may not be aligned 16
+     1>..\..\examples\MultiBody\Pendulum.cpp(225): warning C4316: 'Pendulum' : object allocated on the heap may not be aligned 16
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\bin\Test_BulletDynamics_vs2010_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Gamedev\Visual Leak Detector\lib\Win32" ..\..\bin\BulletDynamics_vs2010_debug.lib ..\..\bin\BulletCollision_vs2010_debug.lib ..\..\bin\LinearMath_vs2010_debug.lib ..\..\bin\gtest_vs2010_debug.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\bin\Test_BulletDynamics_vs2010_debug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"mainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\bin\Test_BulletDynamics_vs2010_debug.lib" /MACHINE:X86 obj\x32\Debug\Test_BulletDynamics\Pendulum.obj
+         Test_BulletDynamics.vcxproj -> Y:\Downloads\bullet3-2.83.7\build3\vs2010\..\..\bin\Test_BulletDynamics_vs2010_debug.exe
+     1>Done Building Project "Y:\Downloads\bullet3-2.83.7\build3\vs2010\Test_BulletDynamics.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:15.31

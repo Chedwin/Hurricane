@@ -1,8 +1,12 @@
-﻿Build started 2/11/2016 9:13:09 AM.
+﻿Build started 2/14/2016 11:04:43 AM.
      1>Project "Y:\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Dependencies\SDL\include /I"C:\Gamedev\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Dependencies\SDL\include /I"C:\Gamedev\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Debug.cpp HurricaneEngine.cpp Main.cpp Window.cpp
+         Window.cpp
          Main.cpp
+         HurricaneEngine.cpp
+         Debug.cpp
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Dependencies\SDL\lib\x86 /LIBPATH:"C:\Gamedev\Visual Leak Detector\lib\Win32" SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /MACHINE:X86 Debug\Debug.obj
          Debug\HurricaneEngine.obj
@@ -13,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.17
+Time Elapsed 00:00:09.00

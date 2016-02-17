@@ -1,0 +1,78 @@
+﻿Build started 2/11/2016 12:28:49 PM.
+     1>Project "Y:\Downloads\bullet3-2.83.7\build3\vs2010\Test_InverseDynamicsKinematics.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\test\InverseDynamics /I..\..\src /I..\..\examples\InverseDynamics /I..\..\Extras\InverseDynamics /I"..\..\test\gtest-1.7.0\include" /I"C:\Gamedev\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D _DEBUG=1 /D _VARIADIC_MAX=10 /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Fo"obj\x32\Debug\Test_InverseDynamicsKinematics\\" /Fd"..\..\bin\Test_InverseDynamicsKinematics_vs2010_debug.pdb" /Gd /TP /analyze- /errorReport:prompt /MP ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp
+         test_invdyn_kinematics.cpp
+     1>y:\downloads\bullet3-2.83.7\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument' : conversion from 'double' to 'const btScalar', possible loss of data
+     1>Y:\Downloads\bullet3-2.83.7\src\../Extras/InverseDynamics/DillCreator.hpp(25): warning C4373: 'btInverseDynamicsBullet3::DillCreator::getBody': virtual function overrides 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+                 y:\downloads\bullet3-2.83.7\extras\inversedynamics\MultiBodyTreeCreator.hpp(27) : see declaration of 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody'
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(19): warning C4244: 'argument' : conversion from 'const int' to 'btScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(19): warning C4244: 'initializing' : conversion from 'btScalar' to 'const int', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(49): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(50): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(51): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(214): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(215): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(217): warning C4244: '=' : conversion from 'double' to 'idScalar', possible loss of data
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(137): warning C4018: '<' : signed/unsigned mismatch
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(136) : while compiling class template member function 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)'
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(207) : see reference to function template instantiation 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)' being compiled
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(207) : see reference to class template instantiation 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>' being compiled
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(139): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(346) : see declaration of '_snprintf'
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(146): warning C4018: '<' : signed/unsigned mismatch
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(144) : while compiling class template member function 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxError(void) const'
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(254) : see reference to function template instantiation 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxError(void) const' being compiled
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(156): warning C4018: '<' : signed/unsigned mismatch
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(154) : while compiling class template member function 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const'
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(254) : see reference to function template instantiation 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const' being compiled
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(77): warning C4244: 'argument' : conversion from 'double' to 'const btScalar', possible loss of data
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(73) : while compiling class template member function 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)'
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::vec3
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(143) : see reference to function template instantiation 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)' being compiled
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::vec3
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(140) : see reference to class template instantiation 'DiffFD<ValueType,DiffType>' being compiled
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::vec3
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(136) : while compiling class template member function 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)'
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(207) : see reference to function template instantiation 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)' being compiled
+     1>..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(77): warning C4244: 'argument' : conversion from 'double' to 'const idScalar', possible loss of data
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(73) : while compiling class template member function 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)'
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::mat33
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(143) : see reference to function template instantiation 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)' being compiled
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::mat33
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(140) : see reference to class template instantiation 'DiffFD<ValueType,DiffType>' being compiled
+                 with
+                 [
+                     ValueType=btInverseDynamicsBullet3::mat33
+         ,            DiffType=btInverseDynamicsBullet3::vec3
+                 ]
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(136) : while compiling class template member function 'VecDiffFD<btInverseDynamicsBullet3::mat33,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)'
+                 ..\..\test\InverseDynamics\test_invdyn_kinematics.cpp(209) : see reference to function template instantiation 'VecDiffFD<btInverseDynamicsBullet3::mat33,btInverseDynamicsBullet3::vec3>::VecDiffFD(std::string,int,idScalar)' being compiled
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\bin\Test_InverseDynamicsKinematics_vs2010_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Gamedev\Visual Leak Detector\lib\Win32" ..\..\bin\BulletInverseDynamicsUtils_vs2010_debug.lib ..\..\bin\BulletInverseDynamics_vs2010_debug.lib ..\..\bin\Bullet3Common_vs2010_debug.lib ..\..\bin\LinearMath_vs2010_debug.lib ..\..\bin\gtest_vs2010_debug.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\bin\Test_InverseDynamicsKinematics_vs2010_debug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"mainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\bin\Test_InverseDynamicsKinematics_vs2010_debug.lib" /MACHINE:X86 obj\x32\Debug\Test_InverseDynamicsKinematics\test_invdyn_kinematics.obj
+         Test_InverseDynamicsKinematics.vcxproj -> Y:\Downloads\bullet3-2.83.7\build3\vs2010\..\..\bin\Test_InverseDynamicsKinematics_vs2010_debug.exe
+     1>Done Building Project "Y:\Downloads\bullet3-2.83.7\build3\vs2010\Test_InverseDynamicsKinematics.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.42
