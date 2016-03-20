@@ -7,15 +7,16 @@
 //
 // Author:			Edwin Chen
 // Created:			Feb 04, 2016
-// Last updated:	Feb 05, 2016
+// Last updated:	Mar 16, 2016
 //
 //*******************************//
 
 #ifndef _WINDOW_H
 #define _WINDOW_H
 
-// Since SDL is a 3rd party SDK, it should NOT be macro-defined in our project
+////// Since SDL is a 3rd party SDK, it should NOT be macro-defined in our project
 #include <SDL.h>
+///////
 
 namespace CORE {
 
