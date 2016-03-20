@@ -14,11 +14,14 @@
     <Filter Include="Math">
       <UniqueIdentifier>{c93e1709-56ac-46bb-b5b4-533836fd44d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{da744696-89fa-45ec-a7a2-7dbfd9c25b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{3e8aec4e-71d7-4a96-81eb-5fa728a21da8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="Debug.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
@@ -28,6 +31,9 @@
     <ClCompile Include="HurricaneEngine.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="string.h">
@@ -35,9 +41,6 @@
     </ClInclude>
     <ClInclude Include="iostream.h">
       <Filter>Defines</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="fstream.h">
       <Filter>Defines</Filter>
@@ -77,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="Debug.h">
       <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
