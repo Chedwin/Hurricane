@@ -13,8 +13,8 @@
 #ifndef _DEBUG_H
 #define _DEBUG_H 
 
-#include "iostream.h"
-#include "fstream.h"
+#include <iostream>
+#include <fstream>
 
 namespace CORE {
 

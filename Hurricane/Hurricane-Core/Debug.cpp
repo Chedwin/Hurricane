@@ -1,5 +1,5 @@
 #include "Debug.h"
-#include "string.h"
+#include <string>
 
 using namespace CORE;
 

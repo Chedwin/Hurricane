@@ -22,24 +22,26 @@ namespace CORE {
 
 	class Window {
 	public:
-		Window();
-		~Window();
+			Window();
+			~Window();
 
-		/// C11 precautions delete these non-needed default constructors and operators
-		Window(const Window&) = delete;
-		Window(Window&&) = delete;
-		Window& operator = (const Window&) = delete;
-		Window& operator = (Window&&) = delete;
+			/// C11 precautions delete these non-needed default constructors and operators
+			Window(const Window&) = delete;
+			Window(Window&&) = delete;
+			Window& operator = (const Window&) = delete;
+			Window& operator = (Window&&) = delete;
 
-		bool OnCreate();
-		void OnDestroy();
+			bool OnCreate();
+			void OnDestroy();
 
-		void SetWindowSize(const int Width_, const int Height_);
+			void SetWindowSize(const int Width_, const int Height_);
 
-		int GetWidth() const;
-		int GetHeight() const;
+			int GetWidth() const;
+			int GetHeight() const;
+
 	protected:
 		void GetInstalledOpenGLInfo();
+		
 	private:
 		bool isInitialized;
 		bool isFullScreen;
