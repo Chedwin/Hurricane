@@ -14,7 +14,7 @@
 #define _VECTOR_H
 
 #ifndef _STRING_H
-	#include "string.h" /// Used for passing exceptions 
+	#include <string> /// Used for passing exceptions 
 #endif
 
 ///

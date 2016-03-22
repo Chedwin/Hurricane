@@ -5,7 +5,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Mar 19, 2016
-// Last updated:	Mar 19, 2016
+// Last updated:	Mar 22, 2016
 //
 //*******************************//
 
@@ -22,5 +22,8 @@
 	#include <crtdbg.h>
 #endif
 
+/// Necessary includes here
+#include <Debug.h>
+#include "GameSceneManager.h"
 
 #endif // endif _MAIN_H

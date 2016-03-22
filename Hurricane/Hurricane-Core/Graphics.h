@@ -18,8 +18,10 @@
 #endif
 
 #ifndef _IOSTREAM
-	#include "iostream.h"
+	#include <iostream>
 #endif
+
+#include <string>
 
 namespace CORE {
 

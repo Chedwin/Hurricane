@@ -1,20 +1,5 @@
-﻿Build started 3/19/2016 11:39:57 PM.
-     1>Project "Y:\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Dependencies\SDL\include /I"C:\Gamedev\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Debug.cpp Graphics.cpp HurricaneEngine.cpp Window.cpp
-         Window.cpp
-         HurricaneEngine.cpp
-         Graphics.cpp
-         Debug.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /LIBPATH:"C:\Gamedev\Visual Leak Detector\lib\Win32" /NOLOGO Debug\Debug.obj
-         Debug\Graphics.obj
-         Debug\HurricaneEngine.obj
-         Debug\Window.obj
-         Hurricane-Core.vcxproj -> Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
-     1>Done Building Project "Y:\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" (Rebuild target(s)).
+﻿Build started 3/22/2016 1:58:48 AM.
 
 Build succeeded.
 
-Time Elapsed 00:00:07.63
+Time Elapsed 00:00:00.26
