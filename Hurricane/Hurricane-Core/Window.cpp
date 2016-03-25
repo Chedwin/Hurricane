@@ -14,7 +14,7 @@ Window::~Window() {
 
 bool Window::Initialize() {
 	isInitialized = false;
-	if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) != 0) {
 		Debug::Log(EMessageType::FATAL_ERR, "Window", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, std::string(SDL_GetError()));
 
 #if defined(DEBUG) | defined(_DEBUG)

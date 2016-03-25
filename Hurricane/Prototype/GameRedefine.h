@@ -15,10 +15,12 @@
 
 #include <Window.h>
 #include <Graphics.h>
+#include <Controller.h>
 
 namespace GAME {
 	class GameWindow   : public CORE::Window {};
 	class GameGraphics : public CORE::Graphics {};
+	class GameController : public CORE::Controller {};
 }
 
 #endif
