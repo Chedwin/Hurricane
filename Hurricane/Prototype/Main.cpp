@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
 #endif
 	
 	// Now for the real game!
-	static_assert(sizeof(void*) == 4, "64 bit program is incompatiable!");
+	static_assert(sizeof(void*) == 4, "64-bit code generation not supported!\n");
 	GameSceneManager::getInstance()->Run();
 
 	return 0;

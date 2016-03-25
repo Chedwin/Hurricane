@@ -3,8 +3,8 @@
 
 #include <memory>
 #include <thread>
-#include <Window.h>
 #include "Scene.h"
+#include "GameRedefine.h"
 
 namespace GAME {
 
@@ -17,7 +17,7 @@ namespace GAME {
 
 		// Notice that windowInstance is a stack variable here
 		// GameSceneManager constructor for the best way to initialize
-		CORE::Window windowInstance;
+		GameWindow windowInstance;
 		Scene* currentScene;
 
 		/// std::unique_ptr is a smart pointer that destroys the object it points to when the unique_ptr goes out of scope.

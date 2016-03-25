@@ -1,11 +1,24 @@
+//*******************************//
+//
+// Name:			Scene.h
+// Description:		Establishes an abstract "Scene" class for all types of Scene to use
+//					This includes our game loop
+//
+// Author:			Edwin Chen
+// Created:			Mar 22, 2016
+// Last updated:	Mar 22, 2016
+//
+//*******************************//
+
 #ifndef SCENE_H
 #define SCENE_H
 
 #include <Timer.h>
 #include <MMath.h>
 #include <Debug.h>
+#include <Window.h>
 
-//using namespace MATH;
+#include "GameRedefine.h"
 
 namespace GAME {
 
@@ -13,7 +26,7 @@ namespace GAME {
 	public:
 		// explicit means that the complier will not try to typecast the argument for the constructor
 		// these two subroutines are "concrete" or real
-		explicit Scene(class Window& WindowRef) : sceneWindowPtr(&WindowRef) {}
+		explicit Scene(GameWindow& WindowRef) : sceneWindowPtr(&WindowRef) {}
 
 		// Having this virtual destructor means that any Scene* ptr will point its appropriate destructor
 		// and not this abstract one
@@ -31,7 +44,7 @@ namespace GAME {
 		virtual void Update(const float DeltaTime) = 0;
 		virtual void Render() const = 0;
 	protected:
-		Window* sceneWindowPtr;
+		GameWindow* sceneWindowPtr;
 
 		MATH::Matrix4 projection;
 	};

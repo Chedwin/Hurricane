@@ -1,11 +1,10 @@
-#include <iostream>
-#include <thread>
-#include <cassert>
 #include "GameSceneManager.h"
+#include "Scene0.h"
+#include <SDL.h>
+#include <iostream>
+#include <cassert>
 #include <Debug.h>
 #include <Timer.h>
-#include <SDL.h>
-//#include "Scene.h"
 
 using namespace CORE;
 using namespace GAME;
@@ -32,7 +31,7 @@ GameSceneManager::GameSceneManager() : windowInstance(), isRunning(false), fps(1
 
 
 GameSceneManager::~GameSceneManager(){
-	windowInstance.OnDestroy();
+	windowInstance.Destroy();
 	isRunning = false;
 
 	delete currentScene;
@@ -42,13 +41,13 @@ GameSceneManager::~GameSceneManager(){
 
 bool GameSceneManager::Initialize(){
 
-	windowInstance.SetWindowSize(900, 600);
-	if (!windowInstance.OnCreate()) {
+	windowInstance.SetWindowSize(980, 600);
+	if (!windowInstance.Initialize()) {
 		Debug::Log(EMessageType::FATAL_ERR, "GameSceneManager", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, "Failed to initialize GUI window!");
 		return false;
 	}
 
-	//SceneChanger(sceneIndex);
+	currentScene = new Scene0(windowInstance);
 
 	return true;
 }
@@ -109,7 +108,7 @@ void GameSceneManager::QuitWindowPrompt() {
 	const SDL_MessageBoxData messageboxdata = {
 		SDL_MESSAGEBOX_INFORMATION, // flags
 		NULL, // window
-		"SDL Game", // window title
+		"Quit Game", // window title
 		"Are you sure you want to quit?", // message
 		SDL_arraysize(buttons), // num of buttons
 		buttons // buttons
