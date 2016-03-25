@@ -1,9 +1,2 @@
-﻿  Window.cpp
-  Timer.cpp
-  Music.cpp
-  Main.cpp
-  Graphics.cpp
-  Debug.cpp
-  Audio.cpp
-  Generating Code...
+﻿  Controller.cpp
   Hurricane-Core.vcxproj -> C:\Users\Edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib

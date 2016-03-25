@@ -72,6 +72,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -106,6 +107,7 @@
     <ClInclude Include="..\Dependencies\ODE\include\ode\threading_impl.h" />
     <ClInclude Include="..\Dependencies\ODE\include\ode\timer.h" />
     <ClInclude Include="Audio.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Matrix.h" />

@@ -26,6 +26,9 @@
     <Filter Include="ODE Physics">
       <UniqueIdentifier>{da744696-89fa-45ec-a7a2-7dbfd9c25b50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{3f47f451-c380-419c-bfca-7286c0d3c4f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Debug.cpp">
@@ -48,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="Music.cpp">
       <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +164,9 @@
     </ClInclude>
     <ClInclude Include="Music.h">
       <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Controller</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
