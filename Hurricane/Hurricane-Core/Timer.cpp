@@ -1,5 +1,5 @@
 #include "Timer.h"
-#include <SDL.h>
+#include "SDL_Adapter.h"
 
 using namespace CORE;
 
@@ -9,12 +9,12 @@ Timer::~Timer() {}
 
 void Timer::UpdateFrameTicks() {
 	prevTicks = currTicks;
-	currTicks = SDL_GetTicks();
+	currTicks = SDL_Adapter::ReturnTicks();
 }
 
 void Timer::Start() {
-	prevTicks = SDL_GetTicks();
-	currTicks = SDL_GetTicks();
+	prevTicks = SDL_Adapter::ReturnTicks();
+	currTicks = SDL_Adapter::ReturnTicks();
 }
 
 float Timer::GetDeltaTime() const {
@@ -27,7 +27,7 @@ unsigned int Timer::GetSleepTime(const unsigned int fps) const {
 		return 0;
 	}
 
-	unsigned int sleepTime = milliSecsPerFrame - (SDL_GetTicks());
+	unsigned int sleepTime = milliSecsPerFrame - (SDL_Adapter::ReturnTicks());
 	if (sleepTime > milliSecsPerFrame) {
 		return milliSecsPerFrame;
 	}

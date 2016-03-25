@@ -2,3 +2,19 @@ Tue Mar 22 01:52:11 2016y:\github\hurricane\hurricane\prototype\gamescenemanager
 ERROR: GameSceneManager::Render()
 Notes: No scene selected as current scene
 
+Tue Mar 22 10:43:22 2016y:\github\hurricane\hurricane\prototype\gamescenemanager.cpp132
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+
+Tue Mar 22 10:43:22 2016y:\github\hurricane\hurricane\prototype\gamescenemanager.cpp132
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+
+Tue Mar 22 11:08:07 2016y:\github\hurricane\hurricane\prototype\gamescenemanager.cpp133
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+
+Tue Mar 22 15:19:14 2016y:\github\hurricane\hurricane\prototype\gamescenemanager.cpp133
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+

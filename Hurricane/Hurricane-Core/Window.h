@@ -2,12 +2,12 @@
 //
 // Name:			Window.h
 // Description:		Creates and handles the window.
-//					We'll use SDL for now.
-//					OpenGL and DirectX will be implemented later....
+//					SDL is used to create an initial window
+//					An OpenGL context will then draw to said SDL window
 //
 // Author:			Edwin Chen
 // Created:			Feb 04, 2016
-// Last updated:	Mar 16, 2016
+// Last updated:	Mar 22, 2016
 //
 //*******************************//
 
@@ -31,10 +31,11 @@ namespace CORE {
 			Window& operator = (const Window&) = delete;
 			Window& operator = (Window&&) = delete;
 
-			bool OnCreate();
-			void OnDestroy();
+			bool Initialize();
+			void Destroy();
 
 			void SetWindowSize(const int Width_, const int Height_);
+			void ClearRenderer() const;
 
 			int GetWidth() const;
 			int GetHeight() const;
@@ -52,12 +53,17 @@ namespace CORE {
 	// We'll start with SDL for now.....
 	public:
 		inline SDL_Window* getSDLWindow() const {
-			return windowPtr;
+			return SDLWindow;
 		}
 		void ToggleFullScreen();
+		SDL_Renderer* GetRenderer() const;
 	private:
-		SDL_Window* windowPtr;
 		SDL_GLContext glContext;
+
+		SDL_Window* SDLWindow;
+		SDL_Renderer* SDLRenderer;
+		SDL_Surface* SDLSurface;
+
 		SDL_Rect winRect;
 	}; // end Window class
 

@@ -3,15 +3,16 @@
 
 using namespace CORE;
 
-Window::Window() : isInitialized(false), windowPtr(nullptr), isFullScreen(false) {
-	OnCreate();
+Window::Window() : SDLWindow(nullptr), SDLRenderer(nullptr), SDLSurface(nullptr),
+								winRect(), isInitialized(false), isFullScreen(false) {
+
 }
 
 Window::~Window() {
-	OnDestroy();
+	Destroy();
 }
 
-bool Window::OnCreate() {
+bool Window::Initialize() {
 	isInitialized = false;
 	if (SDL_Init(SDL_INIT_VIDEO) != 0) {
 		Debug::Log(EMessageType::FATAL_ERR, "Window", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, std::string(SDL_GetError()));
@@ -20,7 +21,6 @@ bool Window::OnCreate() {
 		// Set a breakpoint in DEBUG mode
 		_CrtDbgBreak(); 
 #endif
-
 		return isInitialized;
 	}
 
@@ -31,25 +31,38 @@ bool Window::OnCreate() {
 
 
 	/// Create the SDL window
-	windowPtr = SDL_CreateWindow("Component Framework Project", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+	SDLWindow = SDL_CreateWindow("Hurricane Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 		winRect.w, winRect.h, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN);
 
-	if (windowPtr == nullptr) {
+	if (SDLWindow == nullptr) {
 		Debug::Log(EMessageType::FATAL_ERR, "Window", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, std::string(SDL_GetError()));
 		return isInitialized;
 	}
+
+	Debug::ConsoleLog("Window created!");
+
+	SDLSurface = SDL_GetWindowSurface(SDLWindow);
+	SDL_SetRenderDrawColor(SDLRenderer, 100, 100, 100, 255);
+	SDL_RenderFillRect(SDLRenderer, &winRect);
+	SDL_RenderPresent(SDLRenderer);
+	ClearRenderer();
 
 	isInitialized = true;
 	return true;
 }
 
-void Window::OnDestroy() {
-	SDL_DestroyWindow(windowPtr);
+void Window::Destroy() {
+	SDL_DestroyWindow(SDLWindow);
 	SDL_Quit();
 	SDL_GL_DeleteContext(glContext);
-	windowPtr = nullptr;
+	SDLWindow = nullptr;
 	glContext = nullptr;
 	isInitialized = false;
+}
+
+void Window::ClearRenderer() const {
+	SDL_SetRenderDrawColor(SDLRenderer, 255, 255, 255, 255);
+	SDL_RenderClear(SDLRenderer);
 }
 
 void Window::SetWindowSize(const int width_, const int height_) {
@@ -57,12 +70,14 @@ void Window::SetWindowSize(const int width_, const int height_) {
 	winRect.h = height_;
 }
 
-
 void Window::ToggleFullScreen() {
 	isFullScreen = !isFullScreen;
-	SDL_SetWindowFullscreen(windowPtr, (isFullScreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN));
+	SDL_SetWindowFullscreen(SDLWindow, (isFullScreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN));
 }
 
+SDL_Renderer* Window::GetRenderer() const {
+	return SDLRenderer;
+}
 
 int Window::GetWidth() const {
 	return winRect.w;
