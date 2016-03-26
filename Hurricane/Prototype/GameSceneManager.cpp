@@ -34,6 +34,9 @@ GameSceneManager::~GameSceneManager(){
 	windowInstance.Destroy();
 	isRunning = false;
 
+	delete gController;
+	gController = nullptr;
+
 	delete currentScene;
 	currentScene = nullptr;
 }
@@ -46,6 +49,7 @@ bool GameSceneManager::Initialize(){
 		Debug::Log(EMessageType::FATAL_ERR, "GameSceneManager", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, "Failed to initialize GUI window!");
 		return false;
 	}
+	gController = new GameController();
 
 	currentScene = new Scene0(windowInstance);
 
