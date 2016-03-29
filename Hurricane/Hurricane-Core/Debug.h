@@ -16,7 +16,7 @@
 #include <iostream>
 #include <fstream>
 
-namespace CORE {
+
 
 	/// This enum is a simple 8-bit unsigned int
 	enum class EMessageType : unsigned short {
@@ -43,6 +43,6 @@ namespace CORE {
 		static void ConsoleError(const std::string& error);
 	};
 
-} // end namespace CORE
+
 
 #endif

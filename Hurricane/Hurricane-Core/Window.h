@@ -18,7 +18,7 @@
 #include <SDL.h>
 ///////
 
-namespace CORE {
+
 
 	class Window {
 	public:
@@ -67,6 +67,5 @@ namespace CORE {
 		SDL_Rect winRect;
 	}; // end Window class
 
-} // end namespace CORE
 
 #endif

@@ -1,8 +1,7 @@
 #include "Graphics.h"
-#include "SDL_image.h"
+#include <SDL_image.h>
 #include "Debug.h"
 
-using namespace CORE;
 
 Graphics::Graphics(SDL_Renderer* sdlRenderer) : SDLTexture(nullptr), SDLRenderer(sdlRenderer), width(0), height(0) {
 
@@ -12,7 +11,7 @@ Graphics::~Graphics() {
 	Destroy();
 }
 
-bool Graphics::Load(const std::string& FileName) {
+bool Graphics::ImgLoad(const std::string& FileName) {
 	Destroy();
 	SDL_Texture* NewSDLTexture = nullptr;
 

@@ -2,7 +2,7 @@
 #include "SDL_Adapter.h"
 #include "Debug.h"
 
-using namespace CORE;
+
 
 Music::Music() {
 	Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096);

@@ -13,7 +13,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-namespace CORE {
+#include "SDL_Adapter.h"
 
 	class Timer {
 	private:
@@ -35,6 +35,6 @@ namespace CORE {
 		unsigned int GetSleepTime(const unsigned int fps) const;
 	};
 
-} // namespace GAME
+
 
 #endif

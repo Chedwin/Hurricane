@@ -14,19 +14,15 @@
 
 #include <SDL.h>
 
-namespace CORE {
+class Controller {
+public:
+	Controller();
+	~Controller();
 
-	class Controller {
-	public:
-		Controller();
-		~Controller();
-
-		void InitController();
-		void ShutdownContoller();
-	public:
-		SDL_GameController* controller;
-	};
-
-}
+	void InitController();
+	void ShutdownContoller();
+public:
+	SDL_GameController* controller;
+};
 
 #endif

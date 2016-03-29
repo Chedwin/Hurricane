@@ -4,7 +4,7 @@
 #include <memory>
 #include <thread>
 #include "Scene.h"
-#include "GameRedefine.h"
+#include "Controller.h"
 
 namespace GAME {
 
@@ -17,9 +17,9 @@ namespace GAME {
 
 		// Notice that windowInstance is a stack variable here
 		// GameSceneManager constructor for the best way to initialize
-		GameWindow windowInstance;
+		Window windowInstance;
 		Scene* currentScene;
-		GameController* gController;
+		Controller* gController;
 		/// std::unique_ptr is a smart pointer that destroys the object it points to when the unique_ptr goes out of scope.
 		/// instance is a unique pointer
 		static std::unique_ptr<GameSceneManager> instance;
