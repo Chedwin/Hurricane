@@ -20,9 +20,6 @@
     <Filter Include="Adapter">
       <UniqueIdentifier>{8c9264c0-40bf-4247-9057-47b6613bbdd7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main">
-      <UniqueIdentifier>{b6a836db-4c95-4f65-8c90-294f233d73bc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ODE Physics">
       <UniqueIdentifier>{da744696-89fa-45ec-a7a2-7dbfd9c25b50}</UniqueIdentifier>
     </Filter>
@@ -43,9 +40,6 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="Audio.cpp">
       <Filter>Audio</Filter>
     </ClCompile>
@@ -54,6 +48,12 @@
     </ClCompile>
     <ClCompile Include="Controller.cpp">
       <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="MMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="VMath.cpp">
+      <Filter>Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

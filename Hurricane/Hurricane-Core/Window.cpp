@@ -1,7 +1,7 @@
 #include "Window.h"
 #include "Debug.h"
 
-using namespace CORE;
+
 
 Window::Window() : SDLWindow(nullptr), SDLRenderer(nullptr), SDLSurface(nullptr),
 								winRect(), isInitialized(false), isFullScreen(false) {
@@ -39,12 +39,21 @@ bool Window::Initialize() {
 		return isInitialized;
 	}
 
+	SDLRenderer = SDL_CreateRenderer(SDLWindow, -1, SDL_RENDERER_ACCELERATED);
+
+	if (!SDLRenderer) {
+		Debug::Log(EMessageType::FATAL_ERR, "Window", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, std::string(SDL_GetError()));
+		Destroy();
+		return false;
+	}
+
+
 	Debug::ConsoleLog("Window created!");
 
 	SDLSurface = SDL_GetWindowSurface(SDLWindow);
 	SDL_SetRenderDrawColor(SDLRenderer, 100, 100, 100, 255);
 	SDL_RenderFillRect(SDLRenderer, &winRect);
-	SDL_RenderPresent(SDLRenderer);
+	SDL_RenderPresent(SDLRenderer);	
 	ClearRenderer();
 
 	isInitialized = true;

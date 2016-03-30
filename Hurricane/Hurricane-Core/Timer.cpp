@@ -1,7 +1,5 @@
 #include "Timer.h"
-#include "SDL_Adapter.h"
 
-using namespace CORE;
 
 Timer::Timer() :prevTicks(0), currTicks(0) {} // single colon operator : here pre-initializes the variables
 

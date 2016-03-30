@@ -13,12 +13,11 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include <Timer.h>
 #include <MMath.h>
-#include <Debug.h>
 #include <Window.h>
+#include <Timer.h>
+#include <Debug.h>
 
-#include "GameRedefine.h"
 
 namespace GAME {
 
@@ -26,7 +25,7 @@ namespace GAME {
 	public:
 		// explicit means that the complier will not try to typecast the argument for the constructor
 		// these two subroutines are "concrete" or real
-		explicit Scene(GameWindow& WindowRef) : sceneWindowPtr(&WindowRef) {}
+		explicit Scene(Window& WindowRef) : sceneWindowPtr(&WindowRef) {}
 
 		// Having this virtual destructor means that any Scene* ptr will point its appropriate destructor
 		// and not this abstract one
@@ -44,7 +43,7 @@ namespace GAME {
 		virtual void Update(const float DeltaTime) = 0;
 		virtual void Render() const = 0;
 	protected:
-		GameWindow* sceneWindowPtr;
+		Window* sceneWindowPtr;
 
 		MATH::Matrix4 projection;
 	};

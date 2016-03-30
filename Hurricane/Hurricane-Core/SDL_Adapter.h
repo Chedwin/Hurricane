@@ -16,8 +16,7 @@
 #include <SDL.h>
 #include <SDL_mixer.h>
 
-namespace CORE {
-	
+
 	class SDL_Adapter {
 	public:
 		static Uint32 ReturnTicks() {
@@ -27,5 +26,5 @@ namespace CORE {
 
 	};
 
-}
+
 #endif

@@ -13,15 +13,16 @@
 #ifndef _SCENE0_H
 #define _SCENE0_H
 
-#include <Window.h>
 #include "Scene.h"
+#include <Window.h>
+#include <Graphics.h>
 
 
 namespace GAME {
 
 	class Scene0 : public Scene {
 	public:
-		explicit Scene0(GameWindow& windowRef);
+		explicit Scene0(Window& windowRef);
 		virtual ~Scene0();
 
 
@@ -36,6 +37,9 @@ namespace GAME {
 		virtual void OnDestroy();
 		virtual void Update(const float deltaTime);
 		virtual void Render() const;
+
+	private:
+		Graphics* bckgrd;
 	};
 }
 

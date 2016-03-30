@@ -15,7 +15,6 @@
 
 #include <string>
 
-namespace CORE {
 
 	class Audio {
 	public:
@@ -33,6 +32,6 @@ namespace CORE {
 	protected:
 	private:
 	};
-}
+
 
 #endif

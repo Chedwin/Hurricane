@@ -8,7 +8,7 @@
 /// Geez,  I'm tired - go look it up - SSF
 struct _Mix_Music;
 
-namespace CORE {
+
 
 	class Music : public Audio {
 	public:
@@ -38,6 +38,6 @@ namespace CORE {
 	private:
 		_Mix_Music* MixMusic;
 	};
-}
+
 
 #endif
