@@ -6,12 +6,12 @@
 //
 // Author:			Edwin Chen
 // Created:			Feb 04, 2016
-// Last updated:	Feb 04, 2016
+// Last updated:	Mar 30, 2016
 //
 //*******************************//
 
 
-/// This is a library of Vec3 math routines. 
+/// This is a library of Vec3 math subroutines. 
 #ifndef _VECTOR_H
 	#include "Vector.h"
 #endif

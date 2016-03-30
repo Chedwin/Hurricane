@@ -6,14 +6,14 @@
 //
 // Author:			Edwin Chen
 // Created:			Feb 04, 2016
-// Last updated:	Feb 04, 2016
+// Last updated:	Mar 30, 2016
 //
 //*******************************//
 
 
-#ifndef _VECTOR_H 
-	#include "Vector.h" 
-#endif
+
+#include "Vector.h" 
+
 
 #ifndef _STDIO_H
 	#include <stdio.h>

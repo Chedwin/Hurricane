@@ -2,7 +2,7 @@
 #include <MMath.h>
 #include <Debug.h>
 #include <Window.h>
-#include <Graphics.h>
+#include <Texture.h>
 
 using namespace MATH;
 using namespace GAME;
@@ -19,7 +19,7 @@ Scene0::~Scene0() {
 
 
 bool Scene0::OnCreate() {
-	bckgrd = new Graphics(sceneWindowPtr->GetRenderer());
+	bckgrd = new Texture(sceneWindowPtr->GetRenderer());
 	if (!bckgrd->ImgLoad("res/hurricane.bmp")) {
 		Debug::ConsoleError("Cannot load image!");
 		Debug::Log(EMessageType::ERR, "Scene0", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, "Cannot load image!");
