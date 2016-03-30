@@ -10,7 +10,6 @@
 
 
 // using namespaces here
-using namespace CORE;
 using namespace GAME;
 
 /// Necessary to undefine SDL main macro def ///

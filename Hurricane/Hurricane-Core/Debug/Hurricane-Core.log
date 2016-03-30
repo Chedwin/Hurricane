@@ -1,2 +1,21 @@
-﻿  Controller.cpp
-  Hurricane-Core.vcxproj -> C:\Users\Edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
+﻿Build started 3/29/2016 5:14:12 PM.
+     1>Project "Y:\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IY:\GitHub\Hurricane\Hurricane\\Dependencies\SDL_Image\include /IY:\GitHub\Hurricane\Hurricane\\Dependencies\ODE\include /IY:\GitHub\Hurricane\Hurricane\\Dependencies\SDL_Mixer\include /IY:\GitHub\Hurricane\Hurricane\\Dependencies\SDL\include /I"C:\Gamedev\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Window.cpp
+         Window.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /LIBPATH:"C:\Gamedev\Visual Leak Detector\lib\Win32" /NOLOGO Debug\Audio.obj
+         Debug\Controller.obj
+         Debug\Debug.obj
+         Debug\Graphics.obj
+         Debug\MMath.obj
+         Debug\Music.obj
+         Debug\Timer.obj
+         Debug\VMath.obj
+         Debug\Window.obj
+         Hurricane-Core.vcxproj -> Y:\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
+     1>Done Building Project "Y:\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.29

@@ -1,7 +1,7 @@
 #include "Controller.h"
 #include "Debug.h"
 
-using namespace CORE;
+
 
 Controller::Controller()  {
 	controller = nullptr;

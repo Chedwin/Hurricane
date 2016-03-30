@@ -6,7 +6,7 @@
 #include <Debug.h>
 #include <Timer.h>
 
-using namespace CORE;
+
 using namespace GAME;
 
 /// See the header file regarding unique_ptr
@@ -49,7 +49,7 @@ bool GameSceneManager::Initialize(){
 		Debug::Log(EMessageType::FATAL_ERR, "GameSceneManager", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, "Failed to initialize GUI window!");
 		return false;
 	}
-	gController = new GameController();
+	gController = new Controller();
 
 	currentScene = new Scene0(windowInstance);
 
