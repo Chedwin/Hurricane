@@ -1,41 +1,13 @@
-The Open Dynamics Engine (ODE), Copyright (C) 2001-2007 Russell L. Smith.
--------------------------------------------------------------------------
+============================================
+DLLs and header files for the ODE Physics Library
+============================================
 
-ODE is a free, industrial quality library for simulating articulated
-rigid body dynamics - for example ground vehicles, legged creatures,
-and moving objects in VR environments. It is fast, flexible, robust
-and platform independent, with advanced joints, contact with friction,
-and built-in collision detection.
+In this zip file you will find two dll files called 'libode.dll' and 'libopcode.dll', you will also find two folders called 'ode' and 'drawstuff'. 
+Copy the liblibode.a file to the lib folder of your compiler and copy the two folders to the include folder of your compiler. 
+I have only made one change to the config.h file which is located in the ode folder; this was due to a conflicting definition of int32 in winsock2.h. 
 
-This library is free software; you can redistribute it and/or
-modify it under the terms of EITHER:
-  (1) The GNU Lesser General Public License as published by the Free
-      Software Foundation; either version 2.1 of the License, or (at
-      your option) any later version. The text of the GNU Lesser
-      General Public License is included with this library in the
-      file LICENSE.TXT.
-  (2) The BSD-style license that is included with this library in
-      the file LICENSE-BSD.TXT.
+The source code for ODE was released under the GNU Lesser General Public License http://www.opensource.org/licenses/lgpl-license.html 
+or the BSD-style license http://opende.sourceforge.net/ode-license.html and 
+you can download the complete source code and binaries for ODE at the official ode webite at http://www.q12.org. 
 
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the files
-LICENSE.TXT and LICENSE-BSD.TXT for more details.
-
- * Installation instructions are in the INSTALL.txt file
-
- * The ODE web pages are at http://ode.org/
-
- * An online manual is at http://opende.sf.net/wiki/index.php/Manual
-
- * API documentation is in the file ode/docs/index.html, or you
-   can view it on the web at http://opende.sf.net/docs/index.html
-
-All contributions are copyright by their owners, but the owners
-automatically transfer unrestricted rights in those changes to the ODE
-project, which is released under the dual licenses as indicated. The
-owners can also use the contributions in other projects under other
-licenses if they want (including sell them), but they can't prevent
-anyone from releasing the contributions under the dual ODE licenses as
-part of an ODE release.
-
+Thanks go to Russell Smith for making ODE an open source project.

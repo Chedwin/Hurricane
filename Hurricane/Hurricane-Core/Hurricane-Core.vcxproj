@@ -44,13 +44,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ODE\include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\SDL_Mixer\lib\x86;$(SolutionDir)\Dependencies\SDL_Image\lib\x86;$(SolutionDir)\Dependencies\SDL\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\ode\ode_lib;$(SolutionDir)\Dependencies\SDL_Mixer\lib\x86;$(SolutionDir)\Dependencies\SDL_Image\lib\x86;$(SolutionDir)\Dependencies\SDL\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;ode.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -60,21 +60,21 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ODE\include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\SDL_Mixer\lib\x86;$(SolutionDir)\Dependencies\SDL_Image\lib\x86;$(SolutionDir)\Dependencies\SDL\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\ode\ode_lib;$(SolutionDir)\Dependencies\SDL_Mixer\lib\x86;$(SolutionDir)\Dependencies\SDL_Image\lib\x86;$(SolutionDir)\Dependencies\SDL\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;ode.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="MMath.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Timer.cpp" />
@@ -82,35 +82,11 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision_space.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision_trimesh.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\common.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\compatibility.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\contact.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\error.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\export-dif.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\mass.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\matrix.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\memory.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\misc.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\objects.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\ode.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odeconfig.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odecpp.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odecpp_collision.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odeinit.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odemath.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odemath_legacy.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\precision.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\rotation.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\threading.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\threading_impl.h" />
-    <ClInclude Include="..\Dependencies\ODE\include\ode\timer.h" />
     <ClInclude Include="Audio.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Debug.h" />
-    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MMath.h" />
     <ClInclude Include="Music.h" />

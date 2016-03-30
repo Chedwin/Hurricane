@@ -1,3 +1,14 @@
+//*******************************//
+//
+// Name:			Music.h
+// Description:		Implements music from Audio class
+//
+// Author:			Edwin Chen
+// Created:			Mar 24, 2016
+// Last updated:	Mar 30, 2016
+//
+//*******************************//
+
 #ifndef MUSIC_H
 #define MUSIC_H
 
