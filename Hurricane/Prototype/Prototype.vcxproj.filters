@@ -38,9 +38,6 @@
     <ClInclude Include="Scene0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameRedefine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -20,9 +20,6 @@
     <Filter Include="Adapter">
       <UniqueIdentifier>{8c9264c0-40bf-4247-9057-47b6613bbdd7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ODE Physics">
-      <UniqueIdentifier>{da744696-89fa-45ec-a7a2-7dbfd9c25b50}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Controller">
       <UniqueIdentifier>{3f47f451-c380-419c-bfca-7286c0d3c4f9}</UniqueIdentifier>
     </Filter>
@@ -30,12 +27,6 @@
   <ItemGroup>
     <ClCompile Include="Debug.cpp">
       <Filter>Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>Core</Filter>
@@ -55,11 +46,14 @@
     <ClCompile Include="VMath.cpp">
       <Filter>Math</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="Vector.h">
       <Filter>Math</Filter>
     </ClInclude>
@@ -72,9 +66,6 @@
     <ClInclude Include="Debug.h">
       <Filter>Debug</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Core</Filter>
     </ClInclude>
@@ -84,81 +75,6 @@
     <ClInclude Include="SDL_Adapter.h">
       <Filter>Adapter</Filter>
     </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision_space.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\collision_trimesh.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\common.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\compatibility.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\contact.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\error.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\export-dif.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\mass.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\matrix.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\memory.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\misc.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\objects.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\ode.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odeconfig.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odecpp.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odecpp_collision.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odeinit.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odemath.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\odemath_legacy.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\precision.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\rotation.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\threading.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\threading_impl.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Dependencies\ODE\include\ode\timer.h">
-      <Filter>ODE Physics</Filter>
-    </ClInclude>
     <ClInclude Include="Audio.h">
       <Filter>Audio</Filter>
     </ClInclude>
@@ -167,6 +83,13 @@
     </ClInclude>
     <ClInclude Include="Controller.h">
       <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Window.h">
+      <Filter>Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

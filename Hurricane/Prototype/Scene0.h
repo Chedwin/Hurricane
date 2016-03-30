@@ -15,7 +15,7 @@
 
 #include "Scene.h"
 #include <Window.h>
-#include <Graphics.h>
+#include <Texture.h>
 
 
 namespace GAME {
@@ -39,7 +39,7 @@ namespace GAME {
 		virtual void Render() const;
 
 	private:
-		Graphics* bckgrd;
+		Texture* bckgrd;
 	};
 }
 
