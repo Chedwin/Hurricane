@@ -66,3 +66,11 @@ Tue Mar 29 16:15:26 2016y:\github\hurricane\hurricane\hurricane-core\graphics.cp
 ERROR: Graphics::Load()
 Notes: Failed to create Graphics from ../res/limbo.bmp. SDL Error: Invalid renderer
 
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load res/rinkbmp. SDL Error: Couldn't open res/rinkbmp
+
+Tue Apr  5 02:59:54 2016c:\users\edwin\documents\github\hurricane\hurricane\prototype\titlescene.cpp25
+ERROR: TitleScene::OnCreate()
+Notes: Cannot load image!
+

@@ -1,11 +1,12 @@
-#include "GameSceneManager.h"
-#include "Scene0.h"
-#include <SDL.h>
 #include <iostream>
 #include <cassert>
-#include <Debug.h>
+#include <SDL.h>
 #include <Timer.h>
+#include "GameSceneManager.h"
+#include <Debug.h>
 
+#include "TitleScene.h"
+#include "GameplayScene.h"
 
 using namespace GAME;
 
@@ -44,14 +45,14 @@ GameSceneManager::~GameSceneManager(){
 
 bool GameSceneManager::Initialize(){
 
-	windowInstance.SetWindowSize(980, 600);
+	windowInstance.SetWindowSize(1260, 670);
 	if (!windowInstance.Initialize()) {
 		Debug::Log(EMessageType::FATAL_ERR, "GameSceneManager", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, "Failed to initialize GUI window!");
 		return false;
 	}
 	gController = new Controller();
 
-	currentScene = new Scene0(windowInstance);
+	currentScene = new TitleScene(windowInstance);
 
 	return true;
 }
@@ -78,10 +79,8 @@ void GameSceneManager::Update(const float deltaTime) {
 		if (SDLEvent.type == SDL_KEYDOWN) {
 			switch (SDLEvent.key.keysym.sym) {
 			case SDLK_1:
-				// uses scene pointer to check if the current scene has been beaten or not
-				//if (currentScene->BeatScene()) {
-					//AdvanceSceneWindow();
-				//}
+				AdvanceSceneWindow();
+				
 				return;
 			case SDLK_ESCAPE:
 				// exit by pressing the "esc" key
@@ -141,4 +140,52 @@ void GameSceneManager::Render() const {
 	}
 
 	currentScene->Render();
+}
+
+void GameSceneManager::AdvanceSceneWindow() {
+	const SDL_MessageBoxButtonData buttons[] = {
+		{ 0, 0, "Cancel" }, // (flags, buttonid, text)
+		{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 1, "Yes" }
+	};
+
+	const SDL_MessageBoxData messageboxdata = {
+		SDL_MESSAGEBOX_INFORMATION, // flags
+		NULL, // window
+		"SDL Game", // window title
+		"Advance to next scene?", // message
+		SDL_arraysize(buttons), // num of buttons
+		buttons // buttons
+	};
+
+	int buttonid;
+	if (SDL_ShowMessageBox(&messageboxdata, &buttonid) < 0) {
+		SDL_Log("error displaying message box");
+	}
+	if (buttonid == 1) {
+
+		// currentScene will destroy the scene it's currently on
+		delete currentScene;
+		currentScene = nullptr;
+
+		// it will then "replace" its address with a new scene
+		sceneIndex++;
+		SceneChanger(sceneIndex);
+
+		return;
+	}
+} // end AdvanceSceneWindow()
+
+void GameSceneManager::SceneChanger(const unsigned int _levelIndex) {
+	// Brute force way of changing scenes
+	// Unfortunately, the sceneIndex integer does not correlate directly with the scenes themselves
+	// I'll think of a sexy way to write this later.....
+	switch (_levelIndex) {
+	case 0:
+		currentScene = new TitleScene(windowInstance);
+		return;
+	case 1:
+		windowInstance.SetWindowSize(1260, 670);
+		currentScene = new GameplayScene(windowInstance);
+		return;
+	}
 }
