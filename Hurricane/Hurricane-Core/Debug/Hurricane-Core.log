@@ -1,1 +1,22 @@
-﻿  Hurricane-Core.vcxproj -> C:\Users\Edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
+﻿Build started 2016-04-05 3:01:26 AM.
+     1>Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Dependencies\SDL_Image\include /IC:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Dependencies\ode\ode_include /IC:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Dependencies\SDL_Mixer\include /IC:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Dependencies\SDL\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AABB.cpp
+         AABB.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /NOLOGO Debug\AABB.obj
+         Debug\Audio.obj
+         Debug\Controller.obj
+         Debug\Debug.obj
+         Debug\Texture.obj
+         Debug\MMath.obj
+         Debug\Music.obj
+         Debug\Timer.obj
+         Debug\VMath.obj
+         Debug\Window.obj
+         Hurricane-Core.vcxproj -> C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
+     1>Done Building Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.85

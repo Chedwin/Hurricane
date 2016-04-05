@@ -23,6 +23,15 @@
     <Filter Include="Controller">
       <UniqueIdentifier>{3f47f451-c380-419c-bfca-7286c0d3c4f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{eb5dbf3f-8be2-41b2-99a2-2fd8f0b6fc76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Macros">
+      <UniqueIdentifier>{2ecf8e73-0370-4558-92a4-ea1e86342939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c81d479a-eadb-4a2b-8cc2-0721694bd4a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Debug.cpp">
@@ -51,6 +60,9 @@
     </ClCompile>
     <ClCompile Include="Window.cpp">
       <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +99,20 @@
     <ClInclude Include="Texture.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Common.h" />
     <ClInclude Include="Window.h">
       <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Macros</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

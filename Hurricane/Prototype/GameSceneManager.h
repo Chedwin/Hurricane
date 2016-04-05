@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <thread>
+#include <list>
 #include "Scene.h"
 #include "Controller.h"
 
@@ -34,15 +35,22 @@ namespace GAME {
 		bool isRunning;
 		unsigned int fps; // frames per seconds
 
+		std::list<Scene*> sceneList;
+
 		unsigned int sceneIndex;
+
 	public:
 		static GameSceneManager* getInstance();
 
 		void Run();
+
 		bool Initialize();
 		void Update(const float deltaTime);
 		void Render() const;
 		void QuitWindowPrompt();
+		void AdvanceSceneWindow();
+
+		void SceneChanger(const unsigned int _levelIndex);
 	};
 
 }
