@@ -32,6 +32,9 @@
     <Filter Include="Common">
       <UniqueIdentifier>{c81d479a-eadb-4a2b-8cc2-0721694bd4a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{8ff3d83e-d664-4081-bafb-b90cf0a7b77e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Debug.cpp">
@@ -113,6 +116,15 @@
     </ClInclude>
     <ClInclude Include="Macro.h">
       <Filter>Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimitiveShape.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticGameObject.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>World</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

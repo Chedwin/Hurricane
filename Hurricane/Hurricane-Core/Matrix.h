@@ -9,15 +9,13 @@
 // Last updated:	Mar 30, 2016
 //
 //*******************************//
-
-
-
-#include "Vector.h" 
-
+#pragma once
 
 #ifndef _STDIO_H
 	#include <stdio.h>
 #endif
+
+#include "Vector.h"
 
 namespace  MATH {
 	/// These are the default vectors of the eye (camera) according to OpenGL and the right hand rule

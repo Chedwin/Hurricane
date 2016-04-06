@@ -13,7 +13,9 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include <Matrix.h>
 #include <MMath.h>
+#include <string>
 #include <Window.h>
 #include <Timer.h>
 #include <Debug.h>
@@ -25,7 +27,10 @@ namespace GAME {
 	public:
 		// explicit means that the complier will not try to typecast the argument for the constructor
 		// these two subroutines are "concrete" or real
-		explicit Scene(Window& WindowRef) : sceneWindowPtr(&WindowRef) {}
+		explicit Scene(Window& WindowRef, const std::string& name) : sceneWindowPtr(&WindowRef), level_Name(name) 
+		{
+
+		}
 
 		// Having this virtual destructor means that any Scene* ptr will point its appropriate destructor
 		// and not this abstract one
@@ -46,6 +51,11 @@ namespace GAME {
 		Window* sceneWindowPtr;
 
 		MATH::Matrix4 projection;
+		std::string level_Name;
+	public:
+		std::string GetSceneName() const {
+			return level_Name;
+		}
 	};
 
 }

@@ -7,6 +7,7 @@
 
 #include "TitleScene.h"
 #include "GameplayScene.h"
+#include "Player.h"
 
 using namespace GAME;
 
@@ -52,7 +53,7 @@ bool GameSceneManager::Initialize(){
 	}
 	gController = new Controller();
 
-	currentScene = new TitleScene(windowInstance);
+	SceneChanger(sceneIndex);
 
 	return true;
 }
@@ -181,11 +182,11 @@ void GameSceneManager::SceneChanger(const unsigned int _levelIndex) {
 	// I'll think of a sexy way to write this later.....
 	switch (_levelIndex) {
 	case 0:
-		currentScene = new TitleScene(windowInstance);
+		currentScene = new TitleScene(windowInstance, "Title Scene");
 		return;
 	case 1:
 		windowInstance.SetWindowSize(1260, 670);
-		currentScene = new GameplayScene(windowInstance);
+		currentScene = new GameplayScene(windowInstance, "Prototype Game");
 		return;
 	}
 }

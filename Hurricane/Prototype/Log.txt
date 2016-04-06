@@ -74,3 +74,75 @@ Tue Apr  5 02:59:54 2016c:\users\edwin\documents\github\hurricane\hurricane\prot
 ERROR: TitleScene::OnCreate()
 Notes: Cannot load image!
 
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
+

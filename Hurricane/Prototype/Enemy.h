@@ -19,10 +19,10 @@ namespace GAME {
 
 	class Enemy : public Character {
 	public:
-		bool OnCreate() final;
-		void OnDestroy() final;
-		void FixedUpdate() final;
-		void Render() final;
+		bool OnCreate();
+		void OnDestroy();
+		void FixedUpdate();
+		void Render(const MATH::Matrix4& projection);
 
 	public:
 		void FindPlayer(Player& p);

@@ -1,7 +1,10 @@
 //*******************************//
 //
 // Name:			HockeyStick.h
-// Description:		Concrete hockey stick class
+// Description:		Concrete hockey stick class.
+//					The player HAS-A hockey stick.
+//					A hockey stick is needed to shoot a puck.
+//					THe player can never really "lose" the stick but this class is responsible for shooting pucks.
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
@@ -13,22 +16,25 @@
 #define _HOCKEYSTICK_H
 
 #include <Macro.h>
-#include "Melee.h"
+#include "Weapon.h"
 #include "Puck.h"
 
 namespace GAME {
 
-	class HockeyStick : public Melee {
+	class HockeyStick : public Weapon {
 	public:
-		bool OnCreate() final;
-		void OnDestroy() final;
-		void FixedUpdate() final;
-		void Render() final;
+		HockeyStick();
+		~HockeyStick();
+
+		bool OnCreate();
+		void OnDestroy();
+		void FixedUpdate();
+		void Render(const MATH::Matrix4& projection);
 	public:
 		void Slash();
-		void Shoot();
+		void ShootPuck();
 
-		LIST(Puck) pucks;
+		//LIST(Puck) pucks;
 	};
 
 }

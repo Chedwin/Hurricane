@@ -1,6 +1,6 @@
 //*******************************//
 //
-// Name:			WhiteBox.h
+// Name:			TestBox.h
 // Description:		Class definition for a white box prop in the game.
 //					The player is able to shoot pucks at them and knock them around.
 //
@@ -12,16 +12,18 @@
 
 #pragma once
 
-#include "StaticGameObject.h"
+#include <PrimitiveShape.h>
 
 namespace GAME {
 
-	class WhiteBox : public StaticGameObject {
+	class TestBox{
 	public:
-		bool OnCreate() final;
-		void OnDestroy() final;
-		void FixedUpdate() final;
-		void Render() final;
+		bool OnCreate();
+		void OnDestroy();
+		void FixedUpdate();
+		void Render(const MATH::Matrix4& projection);
+	public:
+		Box textBox;
 	};
 
 }

@@ -9,6 +9,7 @@
 // Last updated:	Feb 05, 2016
 //
 //*******************************//
+#pragma once
 
 #ifndef _VECTOR_H
 #define _VECTOR_H

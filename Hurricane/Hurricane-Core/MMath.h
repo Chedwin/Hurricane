@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef MMATH_H
 #define MMATH_H
 

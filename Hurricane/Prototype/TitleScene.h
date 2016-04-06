@@ -21,7 +21,7 @@ namespace GAME {
 
 	class TitleScene : public Scene {
 	public:
-		explicit TitleScene(Window& windowRef);
+		explicit TitleScene(Window& windowRef, const std::string& name);
 		virtual ~TitleScene();
 
 
