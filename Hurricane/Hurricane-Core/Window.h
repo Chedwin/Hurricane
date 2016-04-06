@@ -20,52 +20,52 @@
 
 
 
-	class Window {
-	public:
-			Window();
-			~Window();
+class Window {
+public:
+		Window();
+		~Window();
 
-			/// C11 precautions delete these non-needed default constructors and operators
-			Window(const Window&) = delete;
-			Window(Window&&) = delete;
-			Window& operator = (const Window&) = delete;
-			Window& operator = (Window&&) = delete;
+		/// C11 precautions delete these non-needed default constructors and operators
+		Window(const Window&) = delete;
+		Window(Window&&) = delete;
+		Window& operator = (const Window&) = delete;
+		Window& operator = (Window&&) = delete;
 
-			bool Initialize();
-			void Destroy();
+		bool Initialize();
+		void Destroy();
 
-			void SetWindowSize(const int Width_, const int Height_);
-			void ClearRenderer() const;
+		void SetWindowSize(const int Width_, const int Height_);
+		void ClearRenderer() const;
 
-			int GetWidth() const;
-			int GetHeight() const;
+		int GetWidth() const;
+		int GetHeight() const;
 
-	protected:
-		void GetInstalledOpenGLInfo();
+protected:
+	void GetInstalledOpenGLInfo();
 		
-	private:
-		bool isInitialized;
-		bool isFullScreen;
+private:
+	bool isInitialized;
+	bool isFullScreen;
 
 
-	// Our 3rd party graphics API calls
-	// From here, we can easily change which API can be implemented
-	// We'll start with SDL for now.....
-	public:
-		inline SDL_Window* getSDLWindow() const {
-			return SDLWindow;
-		}
-		void ToggleFullScreen();
-		SDL_Renderer* GetRenderer() const;
-	private:
-		SDL_GLContext glContext;
+// Our 3rd party graphics API calls
+// From here, we can easily change which API can be implemented
+// We'll start with SDL for now.....
+public:
+	inline SDL_Window* getSDLWindow() const {
+		return SDLWindow;
+	}
+	void ToggleFullScreen();
+	SDL_Renderer* GetRenderer() const;
+private:
+	SDL_GLContext glContext;
 
-		SDL_Window* SDLWindow;
-		SDL_Renderer* SDLRenderer;
-		SDL_Surface* SDLSurface;
+	SDL_Window* SDLWindow;
+	SDL_Renderer* SDLRenderer;
+	SDL_Surface* SDLSurface;
 
-		SDL_Rect winRect;
-	}; // end Window class
+	SDL_Rect winRect;
+}; // end Window class
 
 
 #endif

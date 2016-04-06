@@ -14,22 +14,27 @@
 #ifndef _PUCK_H
 #define _PUCK_H
 
-#include <GameObject.h>
-#include "Projectile.h"
+#include "Weapon.h"
+#include <Texture.h>
 
 namespace GAME {
 
-	class Puck : public Projectile {
+	class Puck : public Weapon {
 	public:
-		bool OnCreate() final;
-		void OnDestroy() final;
-		void FixedUpdate() final;
-		void Render() final;
-
-	public:
-		Puck();
-		Puck(Vec3 startPos);
 		~Puck();
+	protected:
+		Puck() {}
+		Puck(Vec3& startPos);
+
+		bool OnCreate();
+		void OnDestroy();
+		void FixedUpdate();
+		void Render(const MATH::Matrix4& projection);
+
+	protected:
+		Texture* puckBMP;
+	private:
+		friend class HockeyStick;
 	};
 }
 

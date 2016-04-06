@@ -13,16 +13,19 @@
 
 #pragma once 
 
-#include <list>
+#include <string>
+#include <map>
 #include "Scene.h"
 
 class GameSceneManager;
 namespace GAME {
 
 	class SceneLoader {
+	public:
+		void LoadScene();
 	private:
 		friend class GameSceneManager;
-		static std::list<Scene*> sceneList;
+		//std::map<std::string&, Scene*> sceneMap;
 	};
 
 }

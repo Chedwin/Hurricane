@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\SDL\include;$(SolutionDir)\Hurricane-Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\ODE\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\SDL\include;$(SolutionDir)\Hurricane-Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
@@ -80,7 +80,11 @@
   <ItemGroup>
     <ClCompile Include="GameplayScene.cpp" />
     <ClCompile Include="GameSceneManager.cpp" />
+    <ClCompile Include="HockeyStick.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Puck.cpp" />
+    <ClCompile Include="RinkLevelMap.cpp" />
     <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
@@ -90,17 +94,15 @@
     <ClInclude Include="GameSceneManager.h" />
     <ClInclude Include="HockeyStick.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="Melee.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Puck.h" />
+    <ClInclude Include="RinkLevelMap.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="GameplayScene.h" />
-    <ClInclude Include="StaticGameObject.h" />
     <ClInclude Include="Weapon.h" />
-    <ClInclude Include="WhiteBox.h" />
+    <ClInclude Include="TestBox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,11 +4,12 @@
 #include <Window.h>
 #include <Texture.h>
 
-using namespace MATH;
+//using namespace MATH;
 using namespace GAME;
 
 
-TitleScene::TitleScene(Window& windowRef) : Scene(windowRef), bckgrd(nullptr)
+TitleScene::TitleScene(Window& windowRef, const std::string& name)
+	: Scene(windowRef, name), bckgrd(nullptr)
 {
 	OnCreate();
 }

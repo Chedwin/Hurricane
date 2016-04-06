@@ -10,6 +10,6 @@ bool AABB::AABBCollision(AABB a, AABB b)
 		return false; 
 	}
 
-	// No separating axis found, therefor there is at least one overlapping axis
+	// No separating axis found, therefore there is at least one overlapping axis
 	return true;
 }

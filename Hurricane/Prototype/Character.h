@@ -12,15 +12,19 @@
 
 #pragma once
 
+#include <Matrix.h>
 #include "GameObject.h"
+
 
 namespace GAME {
 	
 	class Character : public GameObject {
 	public:
+		virtual ~Character() {}
+
 		virtual bool OnCreate() = 0;
 		virtual void OnDestroy() = 0;
 		virtual void FixedUpdate() = 0;
-		virtual void Render() = 0;
+		virtual void Render(const MATH::Matrix4& projection) = 0;
 	};
 }

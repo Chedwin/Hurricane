@@ -14,12 +14,13 @@
 
 #include "Scene.h"
 #include "Texture.h"
+#include "Player.h"
 
 namespace GAME { 
 
 	class GameplayScene : public Scene {
 	public:
-		explicit GameplayScene(Window& windowRef);
+		explicit GameplayScene(Window& windowRef, const std::string& name);
 		virtual ~GameplayScene();
 
 
@@ -39,6 +40,7 @@ namespace GAME {
 
 	private:
 		Texture* map;
+		Player* playerCharacter;
 	};
 
 }

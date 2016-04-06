@@ -10,6 +10,7 @@
 //
 //*******************************//
 
+#pragma once
 
 /// This is a library of Vec3 math subroutines. 
 #ifndef _VECTOR_H
