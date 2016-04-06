@@ -4,10 +4,6 @@
     <Filter Include="Debug">
       <UniqueIdentifier>{768e349b-cb50-4264-93e4-f299fa6909b5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Math">
       <UniqueIdentifier>{c93e1709-56ac-46bb-b5b4-533836fd44d7}</UniqueIdentifier>
     </Filter>
@@ -26,14 +22,21 @@
     <Filter Include="Physics">
       <UniqueIdentifier>{eb5dbf3f-8be2-41b2-99a2-2fd8f0b6fc76}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Macros">
-      <UniqueIdentifier>{2ecf8e73-0370-4558-92a4-ea1e86342939}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common">
-      <UniqueIdentifier>{c81d479a-eadb-4a2b-8cc2-0721694bd4a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="World">
       <UniqueIdentifier>{8ff3d83e-d664-4081-bafb-b90cf0a7b77e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{d363455d-2eec-41ba-84b3-a85044c2bb3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{c80a2e3f-127f-47f4-839a-1ff15505b9c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Macro Define">
+      <UniqueIdentifier>{2ecf8e73-0370-4558-92a4-ea1e86342939}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -41,7 +44,7 @@
       <Filter>Debug</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
-      <Filter>Core</Filter>
+      <Filter>Timer</Filter>
     </ClCompile>
     <ClCompile Include="Audio.cpp">
       <Filter>Audio</Filter>
@@ -67,6 +70,9 @@
     <ClCompile Include="AABB.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
+    <ClCompile Include="GUIText.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
@@ -82,7 +88,7 @@
       <Filter>Debug</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
-      <Filter>Core</Filter>
+      <Filter>Timer</Filter>
     </ClInclude>
     <ClInclude Include="MMath.h">
       <Filter>Math</Filter>
@@ -108,14 +114,11 @@
     <ClInclude Include="GameObject.h">
       <Filter>Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="AABB.h">
       <Filter>Physics</Filter>
     </ClInclude>
     <ClInclude Include="Macro.h">
-      <Filter>Macros</Filter>
+      <Filter>Macro Define</Filter>
     </ClInclude>
     <ClInclude Include="PrimitiveShape.h">
       <Filter>Physics</Filter>
@@ -125,6 +128,21 @@
     </ClInclude>
     <ClInclude Include="World.h">
       <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIObject.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIText.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIButton.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_EventListener.h">
+      <Filter>GUI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

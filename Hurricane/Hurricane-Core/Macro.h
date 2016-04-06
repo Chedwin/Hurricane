@@ -17,7 +17,7 @@
 #include <list>
 #include <vector>
 #include <string>
-
+#include <map>
 
 
 //////// Macros /////////
@@ -30,11 +30,13 @@
 #define LIST(T) std::list<T>
 
 // vector
-#define VECTOR(T) std::vector<T>
+#define VECTOR(X) std::vector<X>
 
 // string
 #define STRING std::string
 
+// map
+#define MAP(S, T) std::map<S, T>
 
 
 

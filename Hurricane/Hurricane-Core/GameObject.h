@@ -16,7 +16,7 @@
 
 //#include <ode/ode.h>
 
-//#include <Macro.h>
+#include "Macro.h"
 #include "Vector.h"
 #include "VMath.h"
 #include "MMath.h"
@@ -51,7 +51,7 @@ public:
 		return pos;
 	}
 
-	//STRING name;
+	STRING name;
 
 private:
 	Texture* texture;

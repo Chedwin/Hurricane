@@ -97,7 +97,6 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="Puck.h" />
     <ClInclude Include="RinkLevelMap.h" />
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="GameplayScene.h" />

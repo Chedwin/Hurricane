@@ -12,8 +12,8 @@
 
 #pragma once
 
-#include "Scene.h"
-#include "Texture.h"
+#include <Scene.h>
+#include "RinkLevelMap.h"
 #include "Player.h"
 
 namespace GAME { 
@@ -39,7 +39,7 @@ namespace GAME {
 		virtual void Render() const;
 
 	private:
-		Texture* map;
+		RinkLevelMap* rinkMap;
 		Player* playerCharacter;
 	};
 

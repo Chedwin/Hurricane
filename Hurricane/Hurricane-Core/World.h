@@ -2,11 +2,14 @@
 
 //#include <ode/ode.h>
 #include "Matrix.h"
+#include "Window.h"
+#include "Texture.h"
 
 using namespace MATH;
 
 class World {
 public:
+	World(Window* w) : windowPtr(w) {}
 	virtual ~World() {}
 
 	virtual bool OnCreate() = 0;
@@ -16,4 +19,7 @@ public:
 public:
 	/*dWorldID ode_world;
 	void dWorldDestroy(dWorldID _world);*/
+protected:
+	Texture* worldMap;
+	Window* windowPtr;
 };
