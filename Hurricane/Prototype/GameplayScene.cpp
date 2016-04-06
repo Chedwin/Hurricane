@@ -10,7 +10,7 @@ using namespace GAME;
 
 
 GameplayScene::GameplayScene(Window& windowRef, const std::string& name) 
-	: Scene(windowRef, name), map(nullptr)
+	: Scene(windowRef, name), rinkMap(nullptr)
 {
 	//windowRef.SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 	OnCreate();
@@ -32,10 +32,10 @@ bool GameplayScene::OnCreate() {
 							0.0f, 10.0f,
 							0.0f, 10.0f) * ndc;
 
-	map = new Texture(sceneWindowPtr->GetRenderer());
-	if (!map->ImgLoad("res/rink.bmp")) {
-		Debug::ConsoleError("Cannot load image!");
-		Debug::Log(EMessageType::ERR, "GameplayScene", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, "Cannot load image!");
+	rinkMap = new RinkLevelMap(sceneWindowPtr);
+	if (!rinkMap) {
+		Debug::ConsoleError("Cannot load game level!");
+		Debug::Log(EMessageType::ERR, "GameplayScene", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, "Cannot load game level!");
 	}
 
 	playerCharacter = new Player(sceneWindowPtr);
@@ -44,9 +44,8 @@ bool GameplayScene::OnCreate() {
 }
 
 void GameplayScene::OnDestroy(){
-	map->Destroy();
-	delete map;
-	map = nullptr;
+	delete rinkMap;
+	rinkMap = nullptr;
 
 	delete playerCharacter;
 	playerCharacter = nullptr;
@@ -61,7 +60,7 @@ void GameplayScene::Render() const{
 	sceneWindowPtr->ClearRenderer();
 
 	/// External draw calls here
-	map->Draw();
+	rinkMap->Render(projection);
 	playerCharacter->Render(projection);
 
 	SDL_RenderPresent(sceneWindowPtr->GetRenderer());

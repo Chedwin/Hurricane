@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_ttf\include;$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -60,7 +60,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL_tff\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -75,6 +75,7 @@
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="GUIText.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="MMath.cpp" />
     <ClCompile Include="Music.cpp" />
@@ -85,12 +86,16 @@
   <ItemGroup>
     <ClInclude Include="AABB.h" />
     <ClInclude Include="Audio.h" />
-    <ClInclude Include="Common.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GUIButton.h" />
+    <ClInclude Include="GUIObject.h" />
+    <ClInclude Include="GUIText.h" />
+    <ClInclude Include="GUI_EventListener.h" />
     <ClInclude Include="Macro.h" />
     <ClInclude Include="PrimitiveShape.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="StaticGameObject.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Matrix.h" />

@@ -12,7 +12,7 @@
 #ifndef _TitleScene_H
 #define _TitleScene_H
 
-#include "Scene.h"
+#include <Scene.h>
 #include <Window.h>
 #include <Texture.h>
 

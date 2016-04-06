@@ -68,9 +68,6 @@
     <ClInclude Include="Main.h">
       <Filter>Game Logic</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Characters</Filter>
     </ClInclude>
