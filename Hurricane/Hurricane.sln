@@ -10,6 +10,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Prototype", "Prototype\Prot
 		{8B1807E8-0342-4A17-ACEF-BB23950B4D1E} = {8B1807E8-0342-4A17-ACEF-BB23950B4D1E}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Documents", "Solution Documents", "{229E85CA-6952-424C-9A79-13D5EB3CCC90}"
+	ProjectSection(SolutionItems) = preProject
+		Hurricane_READ_ME.txt = Hurricane_READ_ME.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
