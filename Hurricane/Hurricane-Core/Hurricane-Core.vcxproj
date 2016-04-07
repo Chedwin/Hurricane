@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL_ttf\include;$(SolutionDir)\Dependencies\SDL_Image\include;$(SolutionDir)\Dependencies\ode\ode_include;$(SolutionDir)\Dependencies\SDL_Mixer\include;$(SolutionDir)\Dependencies\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\SDL\include;$(ProjectDir)\Dependencies\SDL\SDL_TTF\include;$(ProjectDir)\Dependencies\SDL\SDL_Image\include;$(ProjectDir)\Dependencies\ode\ode_include;$(ProjectDir)\Dependencies\SDL\SDL_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
