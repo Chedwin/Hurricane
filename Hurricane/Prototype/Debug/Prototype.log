@@ -1,14 +1,8 @@
-﻿Build started 2016-04-17 7:43:40 PM.
+﻿Build started 2016-04-17 9:31:07 PM.
      1>Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Prototype\Prototype.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\ODE\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Mixer\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameSceneManager.cpp GameplayScene.cpp Player.cpp PuckManager.cpp
-         PuckManager.cpp
-         Generating Code...
-         Compiling...
-         Player.cpp
-         GameplayScene.cpp
-         GameSceneManager.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\ODE\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Mixer\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Puck.cpp
+         Puck.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Prototype.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Mixer\lib\x86" /LIBPATH:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\SDL_Image\lib\x86" /LIBPATH:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Hurricane-Core\Dependencies\SDL\lib\x86" /LIBPATH:C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\\Debug "Hurricane-Core.lib" SDL2.lib SDL2main.lib SDL2_image.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Prototype.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Prototype.lib" /MACHINE:X86 Debug\GameplayScene.obj
          Debug\GameSceneManager.obj
@@ -25,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.73
+Time Elapsed 00:00:02.22

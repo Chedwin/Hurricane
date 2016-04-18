@@ -66,7 +66,10 @@ void GameplayScene::Render() const{
 
 	/// External draw calls here
 	rinkMap->Render(projection);
+
+
 	playerCharacter->Render(projection);
+	playerCharacter->puckManager->RenderPucks(projection); // I know. It's weird that puckManager is public.....
 
 	SDL_RenderPresent(sceneWindowPtr->GetRenderer());
 };

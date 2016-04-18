@@ -14,8 +14,8 @@
 #ifndef _PUCK_H
 #define _PUCK_H
 
-#include "Weapon.h"
 #include <Texture.h>
+#include "Weapon.h"
 
 namespace GAME {
 
@@ -24,7 +24,6 @@ namespace GAME {
 		~Puck();
 	protected:
 		explicit Puck(class Window& w);
-		Puck(Vec3& startPos);
 
 		bool OnCreate();
 		void OnDestroy();
@@ -33,7 +32,7 @@ namespace GAME {
 	protected:
 		Texture* puckBMP;
 		const float lifeSpan = 2.0f;
-		float lifeTime;
+		float lifeTime = 0.0f;
 	private:
 		friend class PuckManager;
 	};

@@ -35,7 +35,7 @@ void Controller::ControllerUpdate(const float _deltaTime) {
 
 	// up
 	if (state[SDL_SCANCODE_W]) {
-		Debug::ConsoleLog("UP!");
+		//Debug::ConsoleLog("UP!");
 		controllerReturn = UP;
 	}
 	// down
