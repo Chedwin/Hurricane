@@ -20,7 +20,7 @@ namespace GAME {
 		// GameSceneManager constructor for the best way to initialize
 		Window windowInstance;
 		Scene* currentScene;
-		Controller* gController;
+
 		/// std::unique_ptr is a smart pointer that destroys the object it points to when the unique_ptr goes out of scope.
 		/// instance is a unique pointer
 		static std::unique_ptr<GameSceneManager> instance;

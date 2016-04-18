@@ -146,3 +146,7 @@ Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurr
 ERROR: Texture::Load()
 Notes: Failed to load hockeyPlayer.bmp. SDL Error: Couldn't open hockeyPlayer.bmp
 
+Tue Apr  5 20:12:25 2016c:\users\edwin\documents\github\hurricane\hurricane\prototype\gamescenemanager.cpp137
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+

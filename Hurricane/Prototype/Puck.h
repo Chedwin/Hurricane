@@ -7,7 +7,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -23,18 +23,19 @@ namespace GAME {
 	public:
 		~Puck();
 	protected:
-		Puck() {}
+		explicit Puck(class Window& w);
 		Puck(Vec3& startPos);
 
 		bool OnCreate();
 		void OnDestroy();
-		void FixedUpdate();
+		void FixedUpdate(const float _deltaTime);
 		void Render(const MATH::Matrix4& projection);
-
 	protected:
 		Texture* puckBMP;
+		const float lifeSpan = 2.0f;
+		float lifeTime;
 	private:
-		friend class HockeyStick;
+		friend class PuckManager;
 	};
 }
 

@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Documents", "Solut
 		Hurricane_READ_ME.txt = Hurricane_READ_ME.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{194C3251-EB59-4681-AFCD-D018C6131CB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{F43184F3-5D15-4682-B389-330617215F05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -32,5 +36,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B1807E8-0342-4A17-ACEF-BB23950B4D1E} = {194C3251-EB59-4681-AFCD-D018C6131CB5}
+		{70A52CBD-05E1-4BE6-8C8B-9157C9368AF6} = {F43184F3-5D15-4682-B389-330617215F05}
 	EndGlobalSection
 EndGlobal

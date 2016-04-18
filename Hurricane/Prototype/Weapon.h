@@ -6,7 +6,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -24,19 +24,19 @@ namespace GAME {
 			PROJECTILE = 0,
 			MELEE
 		};
-
+		explicit Weapon(class Window& w) : GameObject(w) {}
 		virtual ~Weapon() {}
 
 		virtual bool OnCreate() = 0;
 		virtual void OnDestroy() = 0;
-		virtual void FixedUpdate() = 0;
+		virtual void FixedUpdate(const float _deltaTime) = 0;
 		virtual void Render(const MATH::Matrix4& projection) = 0;
+
+
 
 		WeaponType GetWeaponType() const {
 			return weaponType;
 		}
-
-
 	protected:
 		void SetWeaponType(WeaponType _w) {
 			weaponType = _w;
@@ -45,6 +45,12 @@ namespace GAME {
 		WeaponType weaponType;
 	};
 
+
+	class WeaponContainer {
+	public:
+
+
+	};
 }
 
 #endif

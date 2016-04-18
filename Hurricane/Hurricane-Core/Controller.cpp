@@ -28,3 +28,42 @@ void Controller::ShutdownContoller() {
 		controller = nullptr;
 	}
 }
+
+
+void Controller::ControllerUpdate(const float _deltaTime) {
+	const Uint8* state = SDL_GetKeyboardState(NULL);
+
+	// up
+	if (state[SDL_SCANCODE_W]) {
+		Debug::ConsoleLog("UP!");
+		controllerReturn = UP;
+	}
+	// down
+	else if (state[SDL_SCANCODE_S]) {
+		//Debug::ConsoleLog("DOWN!");
+		controllerReturn = DOWN;
+	}
+	// left
+	else if (state[SDL_SCANCODE_A]) {
+		//Debug::ConsoleLog("LEFT!");
+		controllerReturn = LEFT;
+	}
+	// right
+	else if (state[SDL_SCANCODE_D]) {
+		//Debug::ConsoleLog("RIGHT!");
+		controllerReturn = RIGHT;
+	}
+	else {
+		controllerReturn = NEUTRAL;
+	}
+
+
+	if (state[SDL_SCANCODE_SPACE]) {
+		//Debug::ConsoleLog("SHOOT!");
+		//controllerReturn = SPACE;
+		triggerSpace = true;
+	}
+	else {
+		triggerSpace = false;
+	}
+}

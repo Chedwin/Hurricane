@@ -1,12 +1,13 @@
 #include <SDL.h>
 
 #include "Player.h"
+#include <Debug.h>
 using namespace GAME;
 
-Player::Player(Window* w) 
+Player::Player(class Window& w) 
 	: playerTexture(nullptr), 
 	playerStick(nullptr),
-	windowPtr(w)
+	Character(w)
 {
 	OnCreate();
 }
@@ -24,24 +25,100 @@ bool Player::OnCreate() {
 	if (!playerTexture) {
 		return false;
 	}
+	
 
-	playerStick = new HockeyStick();
+	//playerStick = new HockeyStick(windowPtr);
+	puckManager = new PuckManager(*windowPtr);
+	//weaponList.push_front(playerStick);
+
+	controller = new Controller();
+
 	return true;
 }
 void Player::OnDestroy() {
-	delete playerStick;
-	playerStick = nullptr;
+
+	/*delete playerStick;
+	playerStick = nullptr;*/
+
+	delete puckManager;
+	puckManager = nullptr;
 
 	delete playerTexture;
 	playerTexture = nullptr;
 
+	delete controller;
+	controller = nullptr;
+
 	// Now need to delete a window pointer that hasn't created anything.
-	windowPtr = nullptr;
+	//windowPtr = nullptr;
 }
-void Player::FixedUpdate() {
+
+void Player::FixedUpdate(const float _deltaTime) {
+	controller->ControllerUpdate(_deltaTime);
+	
+	if (controller->triggerSpace) {
+		ShootPuck();
+	}
+
+	puckManager->UpdatePuckManager(_deltaTime);
+
+	switch (controller->controllerReturn) {
+	case UP:
+		MoveUP();
+		return;
+	case DOWN:
+		MoveDOWN();
+		return;
+	case LEFT:
+		MoveLEFT();
+		return;
+	case RIGHT:
+		MoveRIGHT();
+		return;
+	default:
+		return;
+	}
 
 }
+
+void Player::MoveUP() {
+	pos.y += 0.2f;
+}
+void Player::MoveDOWN() {
+	pos.y -= 0.2f;
+}
+void Player::MoveLEFT() {
+	pos.x -= 0.2f;
+	cState = FACE_LEFT;
+	playerFaceDir = SDL_RendererFlip::SDL_FLIP_HORIZONTAL;
+}
+void Player::MoveRIGHT() {
+	pos.x += 0.2f;
+	cState = FACE_RIGHT;
+	playerFaceDir = SDL_RendererFlip::SDL_FLIP_NONE;
+}
+
+void Player::ShootPuck() {
+	//Debug::ConsoleLog("HE SHOOTS!");
+	puckManager->ForcePuck();
+}
+
+
 void Player::Render(const MATH::Matrix4& projection) {
+
 	Vec3 screenCoords = projection * pos;
-	playerTexture->Draw(int(screenCoords.x), int(screenCoords.y));
+
+	switch (cState) {
+	case CharacterState::FACE_RIGHT:
+		playerTexture->Draw(int(screenCoords.x), int(screenCoords.y), 1.0f, nullptr, 0.0f, nullptr, playerFaceDir);
+		return;
+	case CharacterState::FACE_LEFT:
+		playerTexture->Draw(int(screenCoords.x), int(screenCoords.y), 1.0f, nullptr, 0.0f, nullptr, playerFaceDir);
+		return;
+	default:
+		playerTexture->Draw(int(screenCoords.x), int(screenCoords.y), 1.0f, nullptr, 0.0f, nullptr, playerFaceDir);
+		return;
+	}
+
+	puckManager->RenderPucks(projection);
 }

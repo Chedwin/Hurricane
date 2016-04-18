@@ -3,7 +3,7 @@
 
 using namespace GAME;
 
-HockeyStick::HockeyStick() {
+HockeyStick::HockeyStick(class Window& w) : Weapon(w) {
 	OnCreate();
 }
 HockeyStick::~HockeyStick() {
@@ -21,7 +21,7 @@ bool HockeyStick::OnCreate() {
 void HockeyStick::OnDestroy() {
 
 }
-void HockeyStick::FixedUpdate() {
+void HockeyStick::FixedUpdate(const float _deltaTime) {
 	//// For the current prototype, the player texture already has-a hockey stick
 }
 void HockeyStick::Render(const MATH::Matrix4& projection) {
@@ -31,13 +31,13 @@ void HockeyStick::Render(const MATH::Matrix4& projection) {
 
 
 ///////// Character functions //////////////
-void HockeyStick::ShootPuck() {
-	Debug::ConsoleLog("Puck shot!");
-
-	/// Pucks WILL destroy "themselves".
-	/// Class HockeyStick doesn't need to keep track of pucks after being shot.
-	//Puck* p = new Puck();
-}
-void HockeyStick::Slash() {
-	Debug::ConsoleLog("Slash!!");
-}
+//void HockeyStick::ShootPuck() {
+//	Debug::ConsoleLog("Puck shot!");
+//
+//	/// Pucks WILL destroy "themselves".
+//	/// Class HockeyStick doesn't need to keep track of pucks after being shot.
+//	//Puck* p = new Puck();
+//}
+//void HockeyStick::Slash() {
+//	Debug::ConsoleLog("Slash!!");
+//}

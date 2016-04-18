@@ -13,7 +13,7 @@
     <Filter Include="Weapons">
       <UniqueIdentifier>{dc5d85cf-3d83-48c4-ab29-b1d07bf97a97}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game World Stuff">
+    <Filter Include="Game World">
       <UniqueIdentifier>{87748869-0863-4835-a414-309f269453a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -37,12 +37,15 @@
       <Filter>Characters</Filter>
     </ClCompile>
     <ClCompile Include="RinkLevelMap.cpp">
-      <Filter>Game World Stuff</Filter>
+      <Filter>Game World</Filter>
     </ClCompile>
     <ClCompile Include="Puck.cpp">
       <Filter>Weapons</Filter>
     </ClCompile>
     <ClCompile Include="HockeyStick.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="PuckManager.cpp">
       <Filter>Weapons</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,9 +71,6 @@
     <ClInclude Include="Main.h">
       <Filter>Game Logic</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Characters</Filter>
-    </ClInclude>
     <ClInclude Include="TitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -80,11 +80,14 @@
     <ClInclude Include="SceneLoader.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="TestBox.h">
-      <Filter>Game World Stuff</Filter>
-    </ClInclude>
     <ClInclude Include="RinkLevelMap.h">
-      <Filter>Game World Stuff</Filter>
+      <Filter>Game World</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponContainer.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="PuckManager.h">
+      <Filter>Weapons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

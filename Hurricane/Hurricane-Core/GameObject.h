@@ -6,7 +6,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -28,11 +28,12 @@ using namespace MATH;
 class GameObject {
 
 public:
+	explicit GameObject(class Window& w) : windowPtr(&w) {}
 	virtual ~GameObject() {}
 
 	virtual bool OnCreate() = 0;
 	virtual void OnDestroy() = 0;
-	virtual void FixedUpdate() = 0;
+	virtual void FixedUpdate(const float _deltaTime) = 0;
 	virtual void Render(const Matrix4& projection) = 0;
 public:
 	Vec3 pos;
@@ -53,8 +54,10 @@ public:
 
 	STRING name;
 
-private:
+protected:
 	Texture* texture;
+	AABB aabb;
+	Window* windowPtr;
 };
 
 #endif

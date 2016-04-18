@@ -2,18 +2,16 @@
 
 using namespace GAME;
 
-Puck::Puck(Vec3& startPos) : puckBMP(nullptr) {
+Puck::Puck(class Window& w) : puckBMP(nullptr), lifeTime(0.0f), Weapon(w) {
 	OnCreate();
 }
 Puck::~Puck() {
 	OnDestroy();
 }
 
-
-
 bool Puck::OnCreate() {
 	SetWeaponType(WeaponType::PROJECTILE);
-
+	puckBMP = new Texture(windowPtr->GetRenderer());
 	if (!puckBMP->ImgLoad("res/puck.bmp")) {
 		return false;
 	}
@@ -25,11 +23,14 @@ void Puck::OnDestroy() {
 	delete puckBMP;
 	puckBMP = nullptr;
 }
-void Puck::FixedUpdate() {
-	// Pucks will fire themselves with x amount of force
 
-	/// In this update, the puck will destroy itself after x amount of seconds.
-	//delete this;
+
+
+
+void Puck::FixedUpdate(const float _deltaTime) {
+	lifeTime += _deltaTime;
+
+	pos = Vec3(4.0f, 4.0f, 0.0f);
 }
 void Puck::Render(const MATH::Matrix4& projection) {
 	Vec3 screenCoords = projection * pos;
