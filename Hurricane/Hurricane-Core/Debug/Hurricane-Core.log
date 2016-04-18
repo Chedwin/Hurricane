@@ -1,24 +1,9 @@
-﻿Build started 2016-04-06 11:55:13 PM.
+﻿Build started 2016-04-17 6:37:06 PM.
      1>Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_TTF\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\ode\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Mixer\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GUIText.cpp
-         GUIText.cpp
-     1>c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\guitext.cpp(14): warning C4101: 'finalText' : unreferenced local variable
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /NOLOGO Debug\AABB.obj
-         Debug\Audio.obj
-         Debug\Controller.obj
-         Debug\Debug.obj
-         Debug\GUIText.obj
-         Debug\Texture.obj
-         Debug\MMath.obj
-         Debug\Music.obj
-         Debug\Timer.obj
-         Debug\VMath.obj
-         Debug\Window.obj
+     1>Lib:
          Hurricane-Core.vcxproj -> C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
      1>Done Building Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.86
+Time Elapsed 00:00:00.21

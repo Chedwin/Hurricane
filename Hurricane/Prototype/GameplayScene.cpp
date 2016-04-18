@@ -6,6 +6,7 @@
 #include <Vector.h>
 #include "Player.h"
 
+
 using namespace GAME;
 
 
@@ -14,6 +15,8 @@ GameplayScene::GameplayScene(Window& windowRef, const std::string& name)
 {
 	//windowRef.SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 	OnCreate();
+	playerCharacter = new Player(windowRef);
+	playerCharacter->SetPos(MATH::Vec3(12.0f, 6.0f, 0.0f));
 }
 
 GameplayScene::~GameplayScene() {
@@ -38,8 +41,9 @@ bool GameplayScene::OnCreate() {
 		Debug::Log(EMessageType::ERR, "GameplayScene", "OnCreate", __TIMESTAMP__, __FILE__, __LINE__, "Cannot load game level!");
 	}
 
-	playerCharacter = new Player(sceneWindowPtr);
-	playerCharacter->SetPos(MATH::Vec3(12.0f, 6.0f, 0.0f));
+	
+
+
 	return true;
 }
 
@@ -53,6 +57,7 @@ void GameplayScene::OnDestroy(){
 
 void GameplayScene::Update(const float deltaTime) {
 
+	playerCharacter->FixedUpdate(deltaTime);
 }
 
 

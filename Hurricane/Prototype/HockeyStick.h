@@ -8,7 +8,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -17,22 +17,18 @@
 
 #include <Macro.h>
 #include "Weapon.h"
-#include "Puck.h"
 
 namespace GAME {
 
 	class HockeyStick : public Weapon {
 	public:
-		HockeyStick();
+		explicit HockeyStick(class Window& w);
 		~HockeyStick();
 
 		bool OnCreate();
 		void OnDestroy();
-		void FixedUpdate();
+		void FixedUpdate(const float _deltaTime);
 		void Render(const MATH::Matrix4& projection);
-	public:
-		void Slash();
-		void ShootPuck();
 
 		//LIST(Puck) pucks;
 	};

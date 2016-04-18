@@ -36,8 +36,7 @@ GameSceneManager::~GameSceneManager(){
 	windowInstance.Destroy();
 	isRunning = false;
 
-	delete gController;
-	gController = nullptr;
+
 
 	delete currentScene;
 	currentScene = nullptr;
@@ -46,12 +45,12 @@ GameSceneManager::~GameSceneManager(){
 
 bool GameSceneManager::Initialize(){
 
-	windowInstance.SetWindowSize(1260, 670);
+	windowInstance.SetWindowSize(1260, 710);
 	if (!windowInstance.Initialize()) {
 		Debug::Log(EMessageType::FATAL_ERR, "GameSceneManager", "Initialize", __TIMESTAMP__, __FILE__, __LINE__, "Failed to initialize GUI window!");
 		return false;
 	}
-	gController = new Controller();
+	
 
 	SceneChanger(sceneIndex);
 
@@ -185,7 +184,7 @@ void GameSceneManager::SceneChanger(const unsigned int _levelIndex) {
 		currentScene = new TitleScene(windowInstance, "Title Scene");
 		return;
 	case 1:
-		windowInstance.SetWindowSize(1260, 670);
+		//windowInstance.SetWindowSize(1260, 670);
 		currentScene = new GameplayScene(windowInstance, "Prototype Game");
 		return;
 	}

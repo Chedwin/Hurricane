@@ -1,3 +1,4 @@
+#include <Macro.h>
 #include "RinkLevelMap.h"
 using namespace GAME;
 
@@ -15,7 +16,9 @@ RinkLevelMap::~RinkLevelMap() {
 bool RinkLevelMap::OnCreate() {
 	//ode_world = dWorldCreate();
 	worldMap = new Texture(windowPtr->GetRenderer());
-	worldMap->ImgLoad("res/rink.bmp");
+	STRING s = "res/bb_court.bmp";
+
+	worldMap->ImgLoad(s);
 
 	if (!worldMap) {
 		return false;

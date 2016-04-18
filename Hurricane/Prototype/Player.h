@@ -5,7 +5,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -16,27 +16,32 @@
 #include <Controller.h>
 #include "Character.h"
 #include "HockeyStick.h"
+#include "PuckManager.h"
 
 namespace GAME {
 
 	class Player : public Character {
 	public:
-		Player(Window* w);
-		Player() {}
+		explicit Player(class Window& w);
 		~Player();
 
 		bool OnCreate();
 		void OnDestroy();
-		void FixedUpdate();
+		void FixedUpdate(const float _deltaTime);
 		void Render(const MATH::Matrix4& projection);
 
-	public:
-		void Move();
+	private:
+		void MoveUP();
+		void MoveDOWN();
+		void MoveLEFT();
+		void MoveRIGHT();
+		void ShootPuck();
 
-	protected:
 		Texture* playerTexture;
-		HockeyStick* playerStick; // player HAS-A hockey stick
-		Window* windowPtr;
+		Weapon* playerStick; // player HAS-A hockey stick
+		Controller* controller;
+
+		PuckManager* puckManager;
 	};
 
 }

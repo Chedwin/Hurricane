@@ -6,7 +6,7 @@
 //
 // Author:			Edwin Chen
 // Created:			Apr 5, 2016
-// Last updated:	Apr 5, 2016
+// Last updated:	Apr 17, 2016
 //
 //*******************************//
 
@@ -20,7 +20,7 @@ public:
 
 	virtual bool OnCreate() = 0;
 	virtual void OnDestroy() = 0;
-	virtual void FixedUpdate() = 0;
+	virtual void FixedUpdate(const float _deltaTime) = 0;
 	virtual void Render(const Matrix4& projection) = 0;
 };
 
