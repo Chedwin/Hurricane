@@ -4,6 +4,7 @@
 #include <Debug.h>
 using namespace GAME;
 
+
 Player::Player(class Window& w) 
 	: playerTexture(nullptr), 
 	playerStick(nullptr),
@@ -14,8 +15,6 @@ Player::Player(class Window& w)
 Player::~Player() {
 	OnDestroy();
 }
-
-
 
 
 
@@ -120,5 +119,5 @@ void Player::Render(const MATH::Matrix4& projection) {
 		return;
 	}
 
-	puckManager->RenderPucks(projection);
+	
 }

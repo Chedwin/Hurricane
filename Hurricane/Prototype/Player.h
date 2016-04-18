@@ -12,6 +12,7 @@
 #pragma once 
 #include <SDL.h>
 #include <Window.h>
+#include <Debug.h>
 #include <Texture.h>
 #include <Controller.h>
 #include "Character.h"
@@ -30,6 +31,11 @@ namespace GAME {
 		void FixedUpdate(const float _deltaTime);
 		void Render(const MATH::Matrix4& projection);
 
+		Player* GetPlayerInstance() {
+			return this;
+		}
+
+		PuckManager* puckManager;
 	private:
 		void MoveUP();
 		void MoveDOWN();
@@ -41,7 +47,6 @@ namespace GAME {
 		Weapon* playerStick; // player HAS-A hockey stick
 		Controller* controller;
 
-		PuckManager* puckManager;
 	};
 
 }
