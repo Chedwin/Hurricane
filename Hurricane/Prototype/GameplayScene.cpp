@@ -4,6 +4,7 @@
 #include <Window.h>
 #include <Texture.h>
 #include <Vector.h>
+#include <GameObject.h>
 #include "Player.h"
 
 
@@ -15,8 +16,11 @@ GameplayScene::GameplayScene(Window& windowRef, const std::string& name)
 {
 	//windowRef.SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 	OnCreate();
+
 	playerCharacter = new Player(windowRef);
 	playerCharacter->SetPos(MATH::Vec3(12.0f, 6.0f, 0.0f));
+	playerCharacter->puckManager->pmPos = playerCharacter->pos;
+	//playerCharacter->puckManager->pmPos.print();
 }
 
 GameplayScene::~GameplayScene() {

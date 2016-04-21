@@ -1,13 +1,16 @@
-﻿Build started 2016-04-17 8:32:16 PM.
+﻿Build started 2016-04-21 8:50:29 AM.
      1>Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\EasyBMP" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_TTF\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\ode\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Mixer\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Controller.cpp
-         Controller.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_TTF\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\ode\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Mixer\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameObject.cpp
+         GameObject.cpp
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /NOLOGO Debug\AABB.obj
          Debug\Audio.obj
+         Debug\Collider.obj
+         Debug\Component.obj
          Debug\Controller.obj
          Debug\Debug.obj
+         Debug\GameObject.obj
          Debug\GUIText.obj
          Debug\Texture.obj
          Debug\MMath.obj
@@ -15,9 +18,11 @@
          Debug\Timer.obj
          Debug\VMath.obj
          Debug\Window.obj
+         Debug\World.obj
+     1>Collider.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
          Hurricane-Core.vcxproj -> C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib
      1>Done Building Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.58
+Time Elapsed 00:00:00.72

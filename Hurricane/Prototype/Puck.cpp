@@ -17,12 +17,8 @@ bool Puck::OnCreate() {
 	if (!puckBMP->ImgLoad("res/puck.bmp")) {
 		return false;
 	}
+	vel = Vec3(1.0f, 0.0f, 0.0f);
 
-	//Player* player = nullptr;
-	////player->GetPlayerInstance();	
-	//
-	//Vec3 v = player->GetPlayerInstance()->GetPos();
-	pos = Vec3(0.0f, 6.0f, 0.0f);
 	return true;
 }
 void Puck::OnDestroy() {
@@ -31,12 +27,26 @@ void Puck::OnDestroy() {
 	puckBMP = nullptr;
 }
 
+void Puck::SetStartPos(const Vec3& s){
+	pos = s;
+}
 
 
+void Puck::PlayerDir(const SDL_RendererFlip& sf) {
+	Vec3 start(1.0f, 0.0f, 0.0f);
+
+	switch (sf) {
+	case CharacterState::FACE_RIGHT:
+		vel.x = start.x;
+	case CharacterState::FACE_LEFT:
+		vel.x = -start.x;
+	}
+}
 
 void Puck::FixedUpdate(const float _deltaTime) {
 	lifeTime += _deltaTime;
-	pos.x += 1.0f;
+	//pos.print();
+	pos.x += vel.x;
 }
 void Puck::Render(const MATH::Matrix4& projection) {
 	Vec3 screenCoords = projection * pos;

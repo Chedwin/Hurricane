@@ -14,12 +14,12 @@
 #ifndef _GAMEOBJECT_H
 #define _GAMEOBJECT_H
 
-//#include <ode/ode.h>
-
 #include "Macro.h"
 #include "Vector.h"
 #include "VMath.h"
 #include "MMath.h"
+
+#include "Component.h"
 #include "AABB.h"
 #include "Texture.h"
 
@@ -53,10 +53,18 @@ public:
 	}
 
 	STRING name;
+	VECTOR(STRING) tags;
+	void addTag(STRING _tag);
+	bool hasTag() const;
+
+	LIST(Component*) componentLIST;
+	bool addComponent(Component* c);
+	void removeComponent(Component* c);
+
+	VECTOR(GameObject*) childObjects;
 
 protected:
 	Texture* texture;
-	AABB aabb;
 	Window* windowPtr;
 };
 
