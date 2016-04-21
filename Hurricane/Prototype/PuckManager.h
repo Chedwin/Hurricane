@@ -28,6 +28,8 @@ namespace GAME {
 		void UpdatePuckManager(const float _deltaTime);
 		void RenderPucks(const MATH::Matrix4& _proj);
 		void ForcePuck(const SDL_RendererFlip& sf);
+
+		void Puck_Window_Collision();
 	public:
 		LIST(Puck*) puckList;
 		Window& wRef;

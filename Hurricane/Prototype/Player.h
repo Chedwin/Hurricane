@@ -30,6 +30,7 @@ namespace GAME {
 		void OnDestroy();
 		void FixedUpdate(const float _deltaTime);
 		void Render(const MATH::Matrix4& projection);
+		void Player_Window_Collision();
 
 		Player* GetPlayerInstance() {
 			return this;
