@@ -61,6 +61,7 @@ void Player::FixedUpdate(const float _deltaTime) {
 	puckManager->UpdatePuckManager(_deltaTime);
 	puckManager->Puck_Window_Collision();
 
+	Player_Window_Collision();
 	switch (controller->controllerReturn) {
 	case UP:
 		MoveUP();
@@ -102,8 +103,18 @@ void Player::ShootPuck() {
 }
 
 void Player::Player_Window_Collision() {
-	if (pos.x < 0.0f) {
-		
+	if (pos.x <= 0.0f) {
+		pos.x = 0.01f;
+	}
+	if (pos.x >= 23.5f) {
+		pos.x = 23.5f;
+	}
+
+	if (pos.y <= 1.3f) {
+		pos.y = 1.31f;
+	}
+	if (pos.y >= 9.9f) {
+		pos.y = 9.9f;
 	}
 }
 
