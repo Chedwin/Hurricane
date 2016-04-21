@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\EasyBMP;$(ProjectDir)\Dependencies\SDL\include;$(ProjectDir)\Dependencies\SDL\SDL_TTF\include;$(ProjectDir)\Dependencies\SDL\SDL_Image\include;$(ProjectDir)\Dependencies\ode\ode_include;$(ProjectDir)\Dependencies\SDL\SDL_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\SDL\include;$(ProjectDir)\Dependencies\SDL\SDL_TTF\include;$(ProjectDir)\Dependencies\SDL\SDL_Image\include;$(ProjectDir)\Dependencies\ode\ode_include;$(ProjectDir)\Dependencies\SDL\SDL_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -73,8 +73,11 @@
   <ItemGroup>
     <ClCompile Include="AABB.cpp" />
     <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GUIText.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="MMath.cpp" />
@@ -82,10 +85,13 @@
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="VMath.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.h" />
     <ClInclude Include="Audio.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="GameObject.h" />
@@ -95,6 +101,7 @@
     <ClInclude Include="GUI_EventListener.h" />
     <ClInclude Include="Macro.h" />
     <ClInclude Include="PrimitiveShape.h" />
+    <ClInclude Include="RigidBody.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="StaticGameObject.h" />
     <ClInclude Include="Texture.h" />

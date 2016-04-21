@@ -37,7 +37,11 @@ void PuckManager::RenderPucks(const MATH::Matrix4& _proj) {
 } // end RenderPucks()
 
 
-void PuckManager::ForcePuck() {
-	puckList.push_back(new Puck(wRef));
+void PuckManager::ForcePuck(const SDL_RendererFlip& sf) {
+	Puck* n = new Puck(wRef);
+	pmPos -= Vec3(-0.5f, 0.7f, 0.0f);
+	n->SetStartPos(pmPos);
+	n->PlayerDir(sf);
+	puckList.push_back(n);
 	Debug::ConsoleLog("Created puck!");
 }

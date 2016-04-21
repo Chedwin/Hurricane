@@ -27,10 +27,11 @@ namespace GAME {
 
 		void UpdatePuckManager(const float _deltaTime);
 		void RenderPucks(const MATH::Matrix4& _proj);
-		void ForcePuck();
+		void ForcePuck(const SDL_RendererFlip& sf);
 	public:
 		LIST(Puck*) puckList;
 		Window& wRef;
+		Vec3 pmPos;
 	};
 }
 

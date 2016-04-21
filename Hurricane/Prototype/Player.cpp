@@ -25,11 +25,8 @@ bool Player::OnCreate() {
 		return false;
 	}
 	
-
 	//playerStick = new HockeyStick(windowPtr);
 	puckManager = new PuckManager(*windowPtr);
-	//weaponList.push_front(playerStick);
-
 	controller = new Controller();
 
 	return true;
@@ -53,6 +50,8 @@ void Player::OnDestroy() {
 }
 
 void Player::FixedUpdate(const float _deltaTime) {
+	puckManager->pmPos = pos;
+
 	controller->ControllerUpdate(_deltaTime);
 	
 	if (controller->triggerSpace) {
@@ -98,8 +97,7 @@ void Player::MoveRIGHT() {
 }
 
 void Player::ShootPuck() {
-	//Debug::ConsoleLog("HE SHOOTS!");
-	puckManager->ForcePuck();
+	puckManager->ForcePuck(playerFaceDir);
 }
 
 

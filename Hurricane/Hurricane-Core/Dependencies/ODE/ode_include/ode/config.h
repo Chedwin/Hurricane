@@ -10,7 +10,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <malloc.h>
-#include <values.h>
+//#include <values.h>
 #include <float.h>
 
 #ifdef __cplusplus

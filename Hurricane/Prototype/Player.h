@@ -46,7 +46,6 @@ namespace GAME {
 		Texture* playerTexture;
 		Weapon* playerStick; // player HAS-A hockey stick
 		Controller* controller;
-
 	};
 
 }

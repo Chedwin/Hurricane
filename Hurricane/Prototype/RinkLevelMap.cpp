@@ -14,7 +14,6 @@ RinkLevelMap::~RinkLevelMap() {
 
 
 bool RinkLevelMap::OnCreate() {
-	//ode_world = dWorldCreate();
 	worldMap = new Texture(windowPtr->GetRenderer());
 	STRING s = "res/bb_court.bmp";
 
