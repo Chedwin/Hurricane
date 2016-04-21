@@ -59,6 +59,7 @@ void Player::FixedUpdate(const float _deltaTime) {
 	}
 
 	puckManager->UpdatePuckManager(_deltaTime);
+	puckManager->Puck_Window_Collision();
 
 	switch (controller->controllerReturn) {
 	case UP:
@@ -100,6 +101,11 @@ void Player::ShootPuck() {
 	puckManager->ForcePuck(playerFaceDir);
 }
 
+void Player::Player_Window_Collision() {
+	if (pos.x < 0.0f) {
+		
+	}
+}
 
 void Player::Render(const MATH::Matrix4& projection) {
 

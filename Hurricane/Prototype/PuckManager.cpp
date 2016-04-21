@@ -45,3 +45,17 @@ void PuckManager::ForcePuck(const SDL_RendererFlip& sf) {
 	puckList.push_back(n);
 	Debug::ConsoleLog("Created puck!");
 }
+
+void PuckManager::Puck_Window_Collision() {
+	int winWidth = 25.0f;
+	//int winHeight = wRef.GetHeight();
+
+	for (Puck* p : puckList) {
+		if (p->pos.x > 25.0f) {
+			p->vel = -1.0f * p->vel;
+		}
+		else if (p->pos.x <= 0.0f) {
+			p->vel = -1.0f * p->vel;
+		}
+	}
+}
