@@ -50,7 +50,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Hurricane-Core\Dependencies\SDL\SDL_Mixer\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\SDL\SDL_Image\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\SDL\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\ODE\ode_lib;$(SolutionDir)\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Hurricane-Core\Dependencies\SDL\SDL_Mixer\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\SDL\SDL_Image\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\SDL\lib\x86;$(SolutionDir)\Hurricane-Core\Dependencies\ODE\lib;$(SolutionDir)\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>Hurricane-Core.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;ode.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
