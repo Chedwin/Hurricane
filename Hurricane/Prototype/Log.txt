@@ -158,3 +158,11 @@ Sun Apr 17 20:22:07 2016c:\users\edwin\documents\github\hurricane\hurricane\prot
 ERROR: GameSceneManager::Render()
 Notes: No scene selected as current scene
 
+Sun Apr  3 17:34:20 2016c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\texture.cpp20
+ERROR: Texture::Load()
+Notes: Failed to load res/hockey_player_blue.bmp. SDL Error: Couldn't open res/hockey_player_blue.bmp
+
+Sun Apr 17 20:22:07 2016c:\users\edwin\documents\github\hurricane\hurricane\prototype\gamescenemanager.cpp136
+ERROR: GameSceneManager::Render()
+Notes: No scene selected as current scene
+

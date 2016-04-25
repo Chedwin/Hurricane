@@ -48,6 +48,9 @@
     <ClCompile Include="PuckManager.cpp">
       <Filter>Weapons</Filter>
     </ClCompile>
+    <ClCompile Include="WhiteBox.cpp">
+      <Filter>Game World</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Weapon.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="PuckManager.h">
       <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WhiteBox.h">
+      <Filter>Game World</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,7 +20,7 @@ Player::~Player() {
 
 bool Player::OnCreate() {
 	playerTexture = new Texture(windowPtr->GetRenderer());
-	playerTexture->ImgLoad("res/hockey_player2.bmp");
+	playerTexture->ImgLoad("res/hockey_player_blue.bmp");
 	if (!playerTexture) {
 		return false;
 	}
@@ -46,7 +46,7 @@ void Player::OnDestroy() {
 	controller = nullptr;
 
 	// Now need to delete a window pointer that hasn't created anything.
-	//windowPtr = nullptr;
+	windowPtr = nullptr;
 }
 
 void Player::FixedUpdate(const float _deltaTime) {
@@ -135,4 +135,31 @@ void Player::Render(const MATH::Matrix4& projection) {
 	}
 
 	
+}
+
+
+bool Player::CheckPlayerCollision(GameObject* a, GameObject* b) {
+	////Sides of the rects
+	//int leftA, leftB,
+	//	rightA, rightB,
+	//	topA, topB,
+	//	bottomA, bottomB;
+
+	//Calculate the sides of rect a
+	//leftA = a->x;
+	//rightA = a->x + a->w;
+	//topA = a->y;
+	//bottomA = a->y + a->h;
+
+	//calculate the sides of rect b
+	//leftB = b->x;
+	//rightB = b->x + b->w;
+	//topB = b->y;
+	//bottomB = b->y + b->h;
+
+	//if ((bottomA <!topB) && (rightA > leftB) && (leftA < rightB)) {
+	//	return true;
+	//}
+
+	return false;
 }

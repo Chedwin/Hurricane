@@ -138,9 +138,6 @@
     <ClInclude Include="PrimitiveShape.h">
       <Filter>Physics</Filter>
     </ClInclude>
-    <ClInclude Include="StaticGameObject.h">
-      <Filter>Physics</Filter>
-    </ClInclude>
     <ClInclude Include="World.h">
       <Filter>World</Filter>
     </ClInclude>

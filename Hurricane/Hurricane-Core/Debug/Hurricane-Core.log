@@ -1,9 +1,23 @@
-﻿Build started 2016-04-23 1:00:38 AM.
+﻿Build started 2016-04-25 2:21:02 AM.
      1>Project "C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\Hurricane-Core.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_TTF\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\ode\ode_include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Mixer\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Collider.cpp GameObject.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_TTF\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Image\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\ODE\include" /I"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Hurricane-Core\\Dependencies\SDL\SDL_Mixer\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AABB.cpp Audio.cpp Collider.cpp Component.cpp Controller.cpp Debug.cpp GameObject.cpp GUIText.cpp Texture.cpp MMath.cpp Music.cpp Timer.cpp VMath.cpp Window.cpp World.cpp
+         World.cpp
+         Window.cpp
+         VMath.cpp
+         Timer.cpp
+         Music.cpp
+         MMath.cpp
+         Texture.cpp
+         GUIText.cpp
+     1>c:\users\edwin\documents\github\hurricane\hurricane\hurricane-core\guitext.cpp(14): warning C4101: 'finalText' : unreferenced local variable
          GameObject.cpp
+         Debug.cpp
+         Controller.cpp
+         Component.cpp
          Collider.cpp
+         Audio.cpp
+         AABB.cpp
          Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\edwin\Documents\GitHub\Hurricane\Hurricane\Debug\Hurricane-Core.lib" /NOLOGO Debug\AABB.obj
@@ -27,4 +41,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.56
+Time Elapsed 00:00:06.38
