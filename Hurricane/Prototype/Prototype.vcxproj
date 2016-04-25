@@ -89,6 +89,7 @@
     <ClCompile Include="RinkLevelMap.cpp" />
     <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="WhiteBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
@@ -104,6 +105,7 @@
     <ClInclude Include="GameplayScene.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="WeaponContainer.h" />
+    <ClInclude Include="WhiteBox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

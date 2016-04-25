@@ -103,7 +103,6 @@
     <ClInclude Include="PrimitiveShape.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="StaticGameObject.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MMath.h" />

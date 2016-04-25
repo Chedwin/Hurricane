@@ -15,6 +15,7 @@
 #include <Scene.h>
 #include "RinkLevelMap.h"
 #include "Player.h"
+#include "WhiteBox.h"
 
 namespace GAME { 
 
@@ -41,6 +42,7 @@ namespace GAME {
 	private:
 		RinkLevelMap* rinkMap;
 		Player* playerCharacter;
+		LIST(WhiteBox*) boxList;
 	};
 
 }

@@ -32,6 +32,8 @@ namespace GAME {
 		void Render(const MATH::Matrix4& projection);
 		void Player_Window_Collision();
 
+		bool CheckPlayerCollision(GameObject* a, GameObject* b);
+
 		Player* GetPlayerInstance() {
 			return this;
 		}
